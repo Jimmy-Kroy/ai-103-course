@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>6dd32e00-fd2a-4f2f-bfab-6899294c4a36</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>chat_completion.py</StartupFile>
+    <StartupFile>chat_completion_entra_auth.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="chat_completion.py" />
+    <Compile Include="chat_completion_entra_auth.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include=".env" />
