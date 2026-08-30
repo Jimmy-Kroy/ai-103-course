@@ -428,3 +428,4 @@ FodyWeavers.xsd
 *.msm
 *.msp
 /Labs/Lab01-create_foundry_project/python/chat_completion/.env
+/Labs/Lab01-create_foundry_project/c#/chat_completion/Appsettings.json
