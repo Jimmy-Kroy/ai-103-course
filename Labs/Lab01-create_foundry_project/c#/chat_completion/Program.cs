@@ -10,10 +10,14 @@ Console.WriteLine("App started!");
 using IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((context, services) =>
     {
-        services
-            .AddOptions<AzureOpenAIOptions>()
-            .Bind(context.Configuration.GetSection(AzureOpenAIOptions.SectionName))
-            .ValidateOnStart(); // fails fast at startup instead of on first call
+        var azureSection = context.Configuration.GetSection(AzureOpenAIOptions.SectionName);
+        services.Configure<AzureOpenAIOptions>(azureSection);
+
+        Console.WriteLine("Configuration section '{0}':", AzureOpenAIOptions.SectionName);
+        foreach (var child in azureSection.GetChildren())
+        {
+            Console.WriteLine("{0} = {1}", child.Path, child.Value ?? "<null>");
+        }
 
         services.AddSingleton<IOpenAIClient, MyOpenAIClient>();
     })

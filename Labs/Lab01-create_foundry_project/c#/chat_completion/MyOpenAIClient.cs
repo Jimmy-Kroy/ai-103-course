@@ -1,15 +1,11 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using OpenAI;
-using OpenAI.Chat;
 using OpenAI.Responses;
-using System;
 using System.ClientModel;
-using System.Collections.Generic;
-using System.Text;
+using System.ClientModel.Primitives;
+using Azure.Identity;
 
 #pragma warning disable OPENAI001 // Responses API is currently marked as evaluation-only in the SDK.
-
 
 namespace chat_completion
 {
@@ -33,6 +29,8 @@ namespace chat_completion
         private readonly string _deploymentName;
         private readonly string _endpoint;
         private readonly string _apiKey;
+        private readonly string _scope;
+        private readonly bool _useKey;
         private readonly ILogger<MyOpenAIClient> _logger;
 
         /// <summary>
@@ -40,23 +38,28 @@ namespace chat_completion
         /// </summary>
         /// <param name="options">Bound "AzureOpenAI" configuration section.</param>
         /// <param name="logger">Logger (use <see cref="NullLogger{T}"/> if logging isn't set up).</param>
-        public MyOpenAIClient(IOptions<AzureOpenAIOptions> options, ILogger<MyOpenAIClient> logger)
+        public MyOpenAIClient(IOptionsMonitor<AzureOpenAIOptions> options, ILogger<MyOpenAIClient> logger)
         {
+            ResponsesClient client;
             ArgumentNullException.ThrowIfNull(options);
             ArgumentNullException.ThrowIfNull(logger);
 
-            AzureOpenAIOptions settings = options.Value;
+            AzureOpenAIOptions settings = options.CurrentValue;
             settings.Validate();
 
             _logger = logger;
             _deploymentName = settings.DeploymentName;
             _endpoint = settings.Endpoint;
             _apiKey = settings.ApiKey;
+            _scope = settings.Scope;
+            _useKey = settings.UseKey;
 
             // Print the values of the three variables to the console
             Console.WriteLine($"DeploymentName: {_deploymentName}");
             Console.WriteLine($"Endpoint: {_endpoint}");
             Console.WriteLine($"ApiKey: {_apiKey}");
+            Console.WriteLine($"Scope: {_scope}");
+            Console.WriteLine($"UseKey: {_useKey}");
 
             // Use ResponsesClientOptions instead of OpenAIClientOptions
             ResponsesClientOptions _clientOptions = new ResponsesClientOptions()
@@ -64,11 +67,25 @@ namespace chat_completion
                 Endpoint = new Uri(_endpoint)
             };
 
-            // Create the ResponsesClient using the API Key credential and client options
-            ResponsesClient client = new ResponsesClient(
-                new ApiKeyCredential(_apiKey),
-                _clientOptions
-            );
+            if (_useKey)
+            {
+                Console.WriteLine($"Using API Key");
+                // Create the ResponsesClient using the API Key credential and client options
+                client = new ResponsesClient(
+                    new ApiKeyCredential(_apiKey),
+                    _clientOptions
+                );
+            }
+            else
+            {
+                Console.WriteLine($"Using Bearer Token");
+                BearerTokenPolicy tokenProvider = new(new DefaultAzureCredential(), _scope);
+                // Create the ResponsesClient using the API Key credential and client options
+                client = new ResponsesClient(
+                    authenticationPolicy: tokenProvider,
+                    _clientOptions
+                );
+            }
 
             _responsesClient = client;
         }

@@ -34,6 +34,17 @@ namespace chat_completion
         public required string ApiKey { get; init; }
 
         /// <summary>
+        /// The scope used for authentication.
+        /// </summary>
+        public required string Scope { get; init; }
+
+        private bool _useKey;
+        /// <summary>
+        /// Whether to use an API key for authentication.
+        /// </summary>
+        public required bool UseKey { get; init; }
+
+        /// <summary>
         /// Validates that all required values are present. Called eagerly so
         /// misconfiguration fails fast at startup rather than on first use.
         /// </summary>
@@ -57,10 +68,30 @@ namespace chat_completion
                     $"Configuration '{SectionName}:{nameof(Endpoint)}' is not a valid absolute URI: '{Endpoint}'.");
             }
 
-            if (string.IsNullOrWhiteSpace(ApiKey))
+            // Validate authentication configuration depending on UseKey
+            if (UseKey)
             {
-                throw new InvalidOperationException(
-                    $"Configuration '{SectionName}:{nameof(ApiKey)}' is missing or empty.");
+                // When using an API key, ApiKey must be provided
+                if (string.IsNullOrWhiteSpace(ApiKey))
+                {
+                    throw new InvalidOperationException(
+                        $"Configuration '{SectionName}:{nameof(ApiKey)}' is missing or empty when '{SectionName}:{nameof(UseKey)}' is true.");
+                }
+            }
+            else
+            {
+                // When not using an API key, Scope must be provided and be a valid absolute URI
+                if (string.IsNullOrWhiteSpace(Scope))
+                {
+                    throw new InvalidOperationException(
+                        $"Configuration '{SectionName}:{nameof(Scope)}' is missing or empty when '{SectionName}:{nameof(UseKey)}' is false.");
+                }
+
+                if (!Uri.TryCreate(Scope, UriKind.Absolute, out _))
+                {
+                    throw new InvalidOperationException(
+                        $"Configuration '{SectionName}:{nameof(Scope)}' is not a valid absolute URI: '{Scope}'.");
+                }
             }
         }
     }
