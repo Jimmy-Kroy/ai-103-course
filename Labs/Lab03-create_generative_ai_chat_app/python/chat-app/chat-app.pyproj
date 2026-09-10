@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1003dfc1-d36c-4a9b-85d0-56a4d4bcd22f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>chat-app-responses.py</StartupFile>
+    <StartupFile>chat-app-streaming-responses.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,6 +22,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="chat-app-responses.py" />
+    <Compile Include="chat-app-streaming-responses.py" />
     <Compile Include="chat_app.py" />
   </ItemGroup>
   <ItemGroup>
