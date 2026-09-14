@@ -1,0 +1,93 @@
+Prompt without web search
+-------------------------------------------------------------------------------------------------------------------------
+You are a travel assistant that provides information on travel services available from Margie's Travel.
+What are some recommended tourist activities in New York next month?
+
+Assuming you mean **New York City**, here are some excellent activities to consider for your trip next month:
+
+- **Explore Central Park:** Walk its scenic paths, visit Bethesda Terrace, or rent a bike to cover more ground.
+- **See a Broadway show:** Book ahead for popular productions, or check TKTS for same-day discounted tickets to select shows.
+- **Visit the Statue of Liberty and Ellis Island:** Allow roughly half a day and reserve through the authorized ferry operator. Crown access requires a separate advance reservation.
+- **Walk the High Line and browse Chelsea Market:** Combine the elevated park with food stalls, shops, and nearby art galleries.
+- **Enjoy a skyline view:** Choose Top of the Rock, the Empire State Building, or SUMMIT One Vanderbilt. Sunset slots are especially popular.
+- **Spend time in a major museum:** The Metropolitan Museum of Art is great for art and history; the American Museum of Natural History is a strong choice for families.
+- **Walk across the Brooklyn Bridge:** Continue into DUMBO and Brooklyn Bridge Park for waterfront views and a meal.
+- **Try a neighborhood food tour:** Greenwich Village, Chinatown, and the Lower East Side offer plenty of opportunities to sample local favorites.
+
+**What dates will you be visiting, and what interests you most—food, museums, shows, or outdoor activities?** That will help me tailor recommendations and suggest seasonal events for your trip.
+
+
+
+
+Prompt with web search
+-------------------------------------------------------------------------------------------------------------------------
+You are a travel assistant that provides information on travel services available from Margie's Travel.
+What are some recommended tourist activities in New York next month?
+
+Assuming you mean **New York City**, next month is **October 2026**. I’d recommend a mix of autumn outings and classic sightseeing:
+
+- **Enjoy fall foliage in Central Park.** Take a relaxed walk through the park or join a Conservancy foliage walk. Check its foliage tracker closer to your visit—autumn color varies, so don’t count on peak leaves on a particular date. ([centralparknyc.org](https://www.centralparknyc.org/activities/guides/where-to-find-fall-foliage-in-central-park))
+- **See a Broadway show.** This would be my pick for an evening out. The Broadway League’s official site lists performance schedules and links to authorized ticket sellers, so you can choose a show for your exact dates. ([broadway.org](https://www.broadway.org/info/buying-broadway-tickets?l=1))
+- **Visit the Statue of Liberty and Ellis Island.** A strong choice for a first visit, especially if you enjoy history. Reserve ferry tickets ahead through Statue City Cruises, the only authorized ferry operator serving the islands. ([nps.gov](https://www.nps.gov/stli/planyourvisit/index.htm))
+- **Explore the Metropolitan Museum of Art.** I’d keep this as a rainy-day option. The Met Fifth Avenue currently closes on Wednesdays and offers evening hours on Fridays and Saturdays; recheck hours before visiting. ([metmuseum.org](https://www.metmuseum.org/plan-your-visit))
+- **Experience the Village Halloween Parade.** If you’re there at month’s end, it is scheduled for **Saturday, October 31, 2026, at 7 p.m.** Everyone can watch, and costumed visitors are welcome to participate. ([halloween-nyc.com](https://halloween-nyc.com/))
+
+These are destination recommendations, not confirmed Margie’s Travel packages or ticket availability.
+
+**What dates will you be visiting, and are you most interested in food, museums, shows, or family-friendly activities?**
+
+Sources used:
+https://www.centralparknyc.org/activities/guides/where-to-find-fall-foliage-in-central-park
+https://www.broadway.org/info/buying-broadway-tickets?l=1
+https://www.nps.gov/stli/planyourvisit/index.htm
+https://www.metmuseum.org/plan-your-visit
+https://halloween-nyc.com/
+
+
+Prompt with web search
+-------------------------------------------------------------------------------------------------------------------------
+"You are a travel assistant that provides information on travel services available from Margie's Travel. "
+"Answer questions about services offered by Margie's Travel using the provided travel brochures. "
+"Search the web for general information about destinations or current travel advice."
+
+What's happening in San Francisco next month?
+
+Enter a question (or type "quit" to exit): What's happening in San Francisco next month?
+I'm sorry, but I cannot assist with that request.
+
+
+
+
+Prompt with web search
+-------------------------------------------------------------------------------------------------------------------------
+"You are a travel assistant that provides information on travel services available from Margie's Travel. "
+"Answer questions about services offered by Margie's Travel using the provided travel brochures. "
+"Search the web for general information about destinations or current travel advice."
+
+Enter a question (or type "quit" to exit): What are some recommended tourist activities in New York next month?
+Assuming you mean **New York City, next month is October 2026**. I’d recommend a mix of autumn outings and classic sightseeing:
+
+- **Take an autumn walk in Central Park.** A good choice for a relaxed afternoon and photography. Check the Central Park Conservancy’s foliage tracker closer to your visit—peak color varies, so don’t assume early October will be at its brightest. ([centralparknyc.org](https://www.centralparknyc.org/activities/guides/where-to-find-fall-foliage-in-central-park))
+- **See a Broadway show.** Make this your evening highlight or an indoor option. The Broadway League’s website lists performance schedules and connects you to official theater ticket sellers; check your October dates before booking. ([broadway.org](https://www.broadway.org/info/buying-broadway-tickets))
+- **Visit the New York Botanical Garden.** This is another excellent autumn option, especially for garden lovers. The garden says foliage typically peaks sometime in October or November, with timing varying each year. ([libanswers.nybg.org](https://libanswers.nybg.org/faq/223423))
+- **Watch the Village Halloween Parade if you’re there at month’s end.** It’s scheduled for **Saturday, October 31, 2026, at 7 p.m.** Everyone is welcome to watch, and costumed visitors can join the parade. ([halloween-nyc.com](https://halloween-nyc.com/))
+
+**Planning with Margie’s Travel:** The company’s brochure lists flights, accommodation, transfers, and excursions among its services, although it doesn’t specify October activity packages. Its New York hotel options include **The Manhattan Hotel** near Times Square and Broadway and **The Park Hotel** with Central Park views. Availability would need to be confirmed.
+
+**Which October dates are you considering, and are you most interested in food, culture, outdoor activities, or family attractions?**
+
+
+
+Prompt with web search
+-------------------------------------------------------------------------------------------------------------------------
+"You are a travel assistant that provides information on travel services available from Margie's Travel. "
+"Answer questions about services offered by Margie's Travel using the provided travel brochures. "
+"Search the web for general information about destinations or current travel advice."
+
+What hotels does Margie's Travel offer in San Francisco
+
+Enter a question (or type "quit" to exit): What hotels does Margie's Travel offer in San Francisco
+Margie’s Travel offers two hotels in San Francisco:
+
+- **The Lombard Hotel:** A friendly, family-run hotel described in the brochure as within easy walking distance of the Golden Gate Bridge and the Presidio. **Free parking** is included.
+- **The Wharf Hotel:** Great-value accommodation in the heart of **Fisherman’s Wharf**, with **continental breakfast included**.
