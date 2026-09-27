@@ -1,0 +1,3 @@
+# Project Python dependencies
+# Add packages here, one per line. Example:
+# flask==2.2.5

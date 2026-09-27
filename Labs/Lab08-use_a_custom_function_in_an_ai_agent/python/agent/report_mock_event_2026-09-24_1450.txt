@@ -1,0 +1,23 @@
+======================================
+  CONTOSO OBSERVATORIES - SESSION REPORT
+======================================
+Date:           2026-09-24 14:50
+Observer:       Test Observer
+Event:          Mock Event
+Location:       Nowhere
+
+NEXT VISIBLE EVENT
+  Event:        Mock Event
+  Date:         01-01
+
+TELESCOPE BOOKING
+  Tier:         standard
+  Hours:        1.5
+  Hourly Rate:  $50.00
+  Priority:     low
+  Multiplier:   1.0x
+
+COST SUMMARY
+  Base Cost:    $75.00
+  Total Cost:   $75.00
+======================================
