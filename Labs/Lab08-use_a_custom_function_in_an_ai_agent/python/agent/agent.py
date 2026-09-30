@@ -6,9 +6,32 @@ from dotenv import load_dotenv
 # Add references
 from azure.ai.projects import AIProjectClient
 from azure.identity import DefaultAzureCredential
-from azure.ai.projects.models import PromptAgentDefinition, FunctionTool
+# from azure.ai.projects.models import PromptAgentDefinition, FunctionTool
+from azure.ai.projects.models import PromptAgentDefinition, FunctionTool, Reasoning
 from openai.types.responses.response_input_param import FunctionCallOutput, ResponseInputParam
 from functions import next_visible_event, calculate_observation_cost, generate_observation_report
+
+
+def print_reasoning(output_items):
+    """Print readable reasoning summaries from a response's output items.
+
+    Note: `encrypted_content` cannot be decrypted client-side (the key is held
+    by the service), so we only surface the summary text and report the blob size.
+    """
+    for item in output_items:
+        if item.type != "reasoning":
+            continue
+
+        summaries = [s.text for s in (item.summary or []) if getattr(s, "text", None)]
+        if summaries:
+            print("REASONING SUMMARY:")
+            for text in summaries:
+                print(f"  {text}")
+        else:
+            print("REASONING: no summary returned by the model.")
+
+        if item.encrypted_content:
+            print(f"  (encrypted_content present, {len(item.encrypted_content)} chars, not decryptable client-side)")
 
 
 def _stub_next_visible_event(location: str) -> str:
@@ -58,6 +81,9 @@ def main():
     load_dotenv()
     project_endpoint = os.getenv("PROJECT_ENDPOINT")
     model_deployment = os.getenv("MODEL_DEPLOYMENT_NAME")
+
+    print(f"PROJECT_ENDPOINT={project_endpoint}")
+    print(f"MODEL_DEPLOYMENT_NAME={model_deployment}")
 
     # Connect to the project client
     with (
@@ -158,6 +184,7 @@ def main():
                     information about astronomical events and calculate telescope rental costs. 
                     Use the available tools to assist users with their inquiries.""",
                 tools=[event_tool, cost_tool, report_tool],
+                reasoning=Reasoning(summary="auto"),
             ),
         )
 
@@ -189,6 +216,14 @@ def main():
             # Check the run status for failures
             if response.status == "failed":
                 print(f"Response failed: {response.error}")
+            else:
+                print(f"Response output: {response.output}")
+                print_reasoning(response.output)
+                # Optionally still show the tool calls the model chose:
+                for item in response.output:
+                    if item.type == "function_call":
+                        print(f"TOOL CALL: {item.name}({item.arguments})")
+
 
             # Process function calls
             for item in response.output:
@@ -211,9 +246,12 @@ def main():
                             output=result,
                         )
                     )
-
+            
             # Send function call outputs back to the model and retrieve a response
             if input_list:
+                print("INPUT LIST SENT TO AGENT:")
+                print(json.dumps(input_list, indent=2, default=str))
+
                 response = openai_client.responses.create(
                     conversation=conversation.id,
                     input=input_list,
@@ -228,5 +266,12 @@ def main():
 
 
 if __name__ == '__main__': 
-    main()
     # call_all_functions()    # call_all_functions()
+    # 'south_america' 'north_america' 'australia'
+    # events = next_visible_event('australia')
+    # print(events)
+    # price = calculate_observation_cost(telescope_tier="premium", hours=2.5, priority="high")
+    # print(price)
+    # report = generate_observation_report(event_name="Solar Eclipse", location="south_america", telescope_tier="premium", hours=2.5, priority="high", observer_name="John Doe")
+    # print(report) 
+    main()

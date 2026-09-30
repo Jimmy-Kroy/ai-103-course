@@ -1,0 +1,23 @@
+======================================
+  CONTOSO OBSERVATORIES - SESSION REPORT
+======================================
+Date:           2026-09-29 16:10
+Observer:       John Doe
+Event:          Solar Eclipse
+Location:       south_america
+
+NEXT VISIBLE EVENT
+  Event:        Geminids Meteor Shower
+  Date:         12-14
+
+TELESCOPE BOOKING
+  Tier:         premium
+  Hours:        2.5
+  Hourly Rate:  $300.00
+  Priority:     high
+  Multiplier:   1.75x
+
+COST SUMMARY
+  Base Cost:    $750.00
+  Total Cost:   $1312.50
+======================================
