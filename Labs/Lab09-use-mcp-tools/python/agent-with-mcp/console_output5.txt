@@ -1,0 +1,900 @@
+[10/06/26 19:00:22] INFO     Starting MCP server 'Inventory'   transport.py:242
+                             with transport 'stdio'
+
+Connected to server with tools: ['get_inventory_levels', 'get_weekly_sales']
+Agent created (id: inventory-agent:3, name: inventory-agent, version: 3)
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER: Show me the current inventory levels for all products.
+
+--- Response ---
+{
+  "id": "resp_00b8343d8d43532c006ac5294a9bc08190a9761354ee5ebcd8",
+  "created_at": 1791306058.0,
+  "error": null,
+  "incomplete_details": null,
+  "instructions": "\n                You are an inventory assistant. Here are some general guidelines:\n                - Recommend restock if item inventory < 10  and weekly sales > 15\n                - Recommend clearance if item inventory > 20 and weekly sales < 5\n                ",
+  "metadata": {},
+  "model": "gpt-5",
+  "object": "response",
+  "output": [
+    {
+      "id": "rs_00b8343d8d43532c006ac5294d269c819099dfd4d8ddfda7f6",
+      "summary": [
+        {
+          "text": "**Checking inventory levels**\n\nI need to display the current inventory for all products using the get_inventory_levels function. The user specifically requested this information without asking for recommendations, so it’s best to focus strictly on the inventory numbers. However, it could be nice to offer restock or clearance suggestions afterward if they're interested. I'll keep the formatting minimal, maybe using bullet points for clarity, and I'll call the function to get the inventory levels now.",
+          "type": "summary_text"
+        }
+      ],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqxSlQhQ97Al5I1cUERLJsDV4-Yp9eZ1pcmXo0sByAFVjJuI6snwuA1yLu0MA10M5OBWIKNyLOJ2QdMbNzpHxAv73pmZHEIYkeb2VNPOxNtuiXBi2wbPlGE_0LigQmISSO-RtAPvkXEaREq1I5aR1-3OiJ0A4u_FOsCt62P66HV1zf41l1zpDeG5-KbMJL-cAvBuV4Hz4PmFWy_R7h3MJC_JummcrJF5butzwoZuM8dP50kL4BWjl_qi06TcsEGqDg1pMFNRpghWQ2byAGqllwrb3hQLK_F0rtEwNgMn3_SB3Fp4mTiP7ET0z6WSwNcWNXi19y7Jefumkuh38eoF57DEzA7tUNXT0ZfK77OOq7QgQnakNkot2U73KWijFxKOknsWv4A87PB745F15sfFEGh93HBMt9nr43GgItqks6zhxT0aDcMUiVXFeaWesw1RfLFR4PKKJcnYyiHBv8VN8J-uWJ22vRYarcqFDCKInTo-38UwCOJsh78Z-9fEUI-wohenOILFoFohyMm90xvEcZPv7Hlmz2EhRN2X6kYtByQhaCAUgcYSU4f5goswHPaDUqIH_niSrQcRrGVv-onBe1nBFZzpVaHbSSq8p3XT2y0zChl4yvo9W5a1kuB5aj4_SdAsDPdZ2Fdq2nVFeS_6qPnWeODRllkkNZf8MVAYix4VL5GVFtMAX406smsZEPRcOHNc04ZQ9OslVvboWTTQ647rm4-og5aoOopyR3X2PwdySKNU9bqNqT2SjxtOkOTEYFQQAOgq8lQgAEqpv0wjHQv18TChanQQJUMlMAH_ktorZaZsjhzPk7MKLviPuloOP1gzqBGa84aMgghF2TTeaWtxcMYGclI3EPLXx4DOQI0rDhoRFJilQz4HrT8aFAI4TyVnSTd_jKi-vtEro7oZxdZ-4o131bkldyfrHFYXdkSKkPvedtYVZdVGU1q_7ghEIdq9E8MEDXjUfr-aXIpHDsATRsQqhvSjHZUV2h1GTpyp3w4JKJyPMP6Ujt2qS8Bm7rTLJc74hd0RvnHCtvlVNElUfReptdfR54DxnKA12Sl65eCVuaOh4JY4VrIO9fUrbm_pDTugmfzbXV5uERYnOhnYLtSf7zRwfNw4NvQ36WFMuiOlFfR_kkogqxx3Is9wtwUIQ_JPlzc8zAjALBfyCAysgnO24V4oHlO81vz05_bmDAeixoqMc3hAEgsn8t9_vZqxoFxsPj1qelJGrebzoHpVz8t-nliNbHYK4NHujRfrONx2IV7gYwTuF7ki0DcFed5-sHHNU5nT6RBDgX9EJZzFz9w35qUKBzqP8tgqV6AwNPHhuRm8GL1-wKZ9BjQZfIdJXudgCy_iyNq94mrBQj2ifNAT9sBaNaPTq7HtRumxbbUbqCy6ESY1zK1zNGguscSxa2_AxoP_L1zRkT4CxXwlHxhvgKhIQUFRUz_Uzt4i3Exw8gVsVG3gg8BkWqoiHZrhqcjNA4pkSE7dBV1GAdfpkXGU4_blwJKgzg17seEIwe52E-NB3hhs5nulejL5j7xZIoNQk5XmhYz0EHOHPCu9rgfvhFVHxeHsl8knyu8EAZPR8ZtNWmHFHB062Eh9oF3kN_eQRBhJrvyMGyWZvba5ZWBC18NTH3Z3IaglvZXwuG3OJKs_ga3C-g2Fg81ZBsUgwKJXATp-armjDCh_xj0gDsBMzVOugJ2ghz67wSCnJ9fIgBqu_6DcJbVybs6Pa0nhC-uA-GSSNDcR3cKqCA_tGnIg8g_OoYCIeht98ysia5MU0iR8ybEQXHK4xwh-7jFdDJgROEE8oVuI7eO6fvaMPiGxaOiWBhjnsIHcLVMrVUE-u7Pl4aqJBUcJdTZOuLt-ZL5by1I1IzivSBKumu5S-KR2Ec0Y0SdqqS8wtc51lOs_y9HGTkcvqmFs5w_DdHOEEJ5DWjv3KvV7BYKjUJW3EYGxZwFAAJCoQGAc--yKCrL_2vrT_V5jjrDh72ucm80-2V04ys77Lg9XS64MK3esyWWkf37QeZ9TRUzA3y_nqemOqHR7vmZsyH7u9oL3nXRJwg1XkJ960K0v2WgDqtr6P0lKLjKM8hVnJGU5qOI78L_LV57JR8UjTaRApsfjJMkpxEvvsCtiisc9pc7bykCLMWXNd_3bAz3k7x-N60S_gHqLHTKc_UsECa3Hj8MEMx4pWrWnB_1PfHOYjRpOsRzx3oxQ==",
+      "status": null,
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "inventory-agent",
+        "version": "3"
+      },
+      "response_id": "resp_00b8343d8d43532c006ac5294a9bc08190a9761354ee5ebcd8"
+    },
+    {
+      "arguments": "{}",
+      "call_id": "call_z1k77hsnbecv4dXjMkk1KGkl",
+      "name": "get_inventory_levels",
+      "type": "function_call",
+      "id": "fc_00b8343d8d43532c006ac529502ee481909727bcae3597f852",
+      "caller": null,
+      "namespace": null,
+      "status": "completed",
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "inventory-agent",
+        "version": "3"
+      },
+      "response_id": "resp_00b8343d8d43532c006ac5294a9bc08190a9761354ee5ebcd8"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "temperature": 1.0,
+  "tool_choice": "auto",
+  "tools": [
+    {
+      "name": "get_inventory_levels",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "strict": true,
+      "type": "function",
+      "allowed_callers": null,
+      "defer_loading": null,
+      "description": "Returns current inventory for all products.",
+      "output_schema": null
+    },
+    {
+      "name": "get_weekly_sales",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "strict": true,
+      "type": "function",
+      "allowed_callers": null,
+      "defer_loading": null,
+      "description": "Returns number of units sold last week.",
+      "output_schema": null
+    }
+  ],
+  "top_p": 1.0,
+  "background": false,
+  "completed_at": 1791306064.0,
+  "conversation": {
+    "id": "conv_00b8343d8d43532c009XWPdBNKEy9WCBWXYH0Rb8X1hq8w6Dsk"
+  },
+  "max_output_tokens": null,
+  "max_tool_calls": null,
+  "moderation": null,
+  "previous_response_id": null,
+  "prompt": null,
+  "prompt_cache_key": null,
+  "prompt_cache_options": null,
+  "prompt_cache_retention": "in_memory",
+  "reasoning": {
+    "context": "current_turn",
+    "effort": "medium",
+    "generate_summary": null,
+    "mode": "standard",
+    "summary": "detailed"
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "status": "completed",
+  "text": {
+    "format": {
+      "type": "text"
+    },
+    "verbosity": "medium"
+  },
+  "top_logprobs": 0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 121,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 175,
+    "output_tokens_details": {
+      "reasoning_tokens": 128
+    },
+    "total_tokens": 296
+  },
+  "user": null,
+  "agent_reference": {
+    "type": "agent_reference",
+    "name": "inventory-agent",
+    "version": "3"
+  },
+  "content_filters": [
+    {
+      "blocked": false,
+      "source_type": "prompt",
+      "content_filter_results": {
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "filtered": false,
+          "detected": false
+        }
+      },
+      "content_filter_raw": [],
+      "content_filter_offsets": {
+        "start_offset": 0,
+        "end_offset": 87,
+        "check_offset": 0
+      }
+    },
+    {
+      "blocked": false,
+      "source_type": "completion",
+      "content_filter_results": {
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_text": {
+          "filtered": false,
+          "detected": false
+        },
+        "protected_material_code": {
+          "filtered": false,
+          "detected": false
+        }
+      },
+      "content_filter_raw": [],
+      "content_filter_offsets": {
+        "start_offset": 0,
+        "end_offset": 817,
+        "check_offset": 0
+      }
+    }
+  ]
+}
+INPUT LIST SENT TO AGENT:
+[
+  {
+    "type": "function_call_output",
+    "call_id": "call_z1k77hsnbecv4dXjMkk1KGkl",
+    "output": "{\"Moisturizer\":6,\"Shampoo\":8,\"Body Spray\":28,\"Hair Gel\":5,\"Lip Balm\":12,\"Skin Serum\":9,\"Cleanser\":30,\"Conditioner\":3,\"Setting Powder\":17,\"Dry Shampoo\":45}"
+  }
+]
+Agent response: Here are the current inventory levels:
+
+- Moisturizer: 6
+- Shampoo: 8
+- Body Spray: 28
+- Hair Gel: 5
+- Lip Balm: 12
+- Skin Serum: 9
+- Cleanser: 30
+- Conditioner: 3
+- Setting Powder: 17
+- Dry Shampoo: 45
+
+Would you like me to check weekly sales and recommend restocks or clearances based on these levels?
+
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER: Are there any products that should be restocked?
+
+--- Response ---
+{
+  "id": "resp_00b8343d8d43532c006ac52a3cf4388190be63dca654106bba",
+  "created_at": 1791306301.0,
+  "error": null,
+  "incomplete_details": null,
+  "instructions": "\n                You are an inventory assistant. Here are some general guidelines:\n                - Recommend restock if item inventory < 10  and weekly sales > 15\n                - Recommend clearance if item inventory > 20 and weekly sales < 5\n                ",
+  "metadata": {},
+  "model": "gpt-5",
+  "object": "response",
+  "output": [
+    {
+      "id": "rs_00b8343d8d43532c006ac52a3e9e588190a0d54e6ccd95809c",
+      "summary": [],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqxSpBj3kGmS2e7iZw12XZwrGAWjHHNnhgyO0YlCcmPiqXQrWaykpHTt2S74KjHkz2HCG6QZeMEeFYgeydpxUcMRBfsNChHSzZ4GhKtENI7fx99ewR6RS2_CgIhjOierQLH9t29TbVXxDSK8KuJtpEPpKvyBzKihuQnGfkrffibTMbWEUtq9He4nkt082yxFLEqX1hhjASl_L6eWI474pcib6uEJBdWFKKazbqnKcRkUNGZq6eEOrdWITcDjpV8dXNNrmN-8QHfxrt8lTw54fI3SsnfYYAm7qwVmfWXKIBrOJ8gPyIEqm-K4d3SpPALClPgFEPGrudVENmB_UJfxS5_aHLfpeRbo76O-Sx7CsQFuod_ynfg7f8ZZBJXpIBovGggyUKRyYY__ztIYvGX62KdB6Qc_rFElNRdLK37be17UOu-ZKp2mwTgdiA_00fxC9wztgt45EFyQJEOXhct8dpFv0_ECOMhnhnfa8knOvcgPR9qAhI3mwkuxCHRPt-5bg0__wKj9inHFQefEkOpOZHUFAjHDETQzVBeQA6MIn3GzR_QyyALRnDZ5d6_B3r3xcPYta_hSrc1VrwD3I4dn6_5Za1T5iYSVcXiL5UCW2MfhGCLxeriFeu0AHtpJNE2Sm41l71CdXwuv2VfoTddXfY5DsFZebzgRkkQkOZ-hDGcZWIz_k-vZfaCmkJfJlppNPHpwXSclbBD5EGRen0R8MuhqqYJm2e-fSS4vm-DGs2xZ0gWXFb5w4eK_IMv6GKU6oa4o5YjlrnfSJG47iHUndxRag_43-djRb6I_O8YJSE9pAJy1WPfKxtB8jwoSPwFeW51kCutUV97welfI6IRlwB8h95fu4XDZHNw-nO9rhYXSPPe928LZp3JCZH89k6yVsKMstKDD2wwzSTySgsf4KrNOhs-9-6_BW4Au1xTox_rCWnLMHuYjTVB47T07mmJN4HKdUm7cCo5jljnu3D5oONInoWTA1cpBZg2V9qpxEkxq2HsNojikGTMWnGHusvdsroXhuWOt-agoDU1MMG7AWmdEGQLNrfp0YVa-xvmPZ737MEuXkH8aKI74SJs8VxuYPe_Ck0PnNIn4dfEwxyA--S5CfGHXqXZz6rj1ofKCcq3inzaypP98glq4lSHM4lnvYF40mVUPn91YQJa7yHW7OSg4uBQd3lyjR6tr7wCXUU79HA6_Th2Ic_kpDu5l82aWpWR6tOTEl95O4dvP3VdCVcMU1Kcj-dQiDjPgYMsM_HdwIGWqzLV_UpJ4tY99jMuV8e6fwpm2WFc5xVBQa_CxLZVuZ6z2yqEEPNiUNLz1QOyCkSzDrB2dleHekS3_XoookTuusHuf9j4WZ3t1LR57tpd5eK36TX4Hm-Qopw1X_gvfCXM7Nen6RhKJ517S0i8mAOlsftX6XVe9Pm00SPvgBz6ZmGwUuwGHZu9eVIfKWcxrZe7xNufwb8AVAUMUpaJyqFG2qbLIjXhXxE_unkBtYXEG013Cz9IefW6DQCjUoWbrQ9CMwQmFbDO-2UJW0aEt9-bRuZQOYYV5aSGIzR55c-GapCijvAGJ0eMkU6Pfrqt3FOCWvSvKKJiMbolxjS8TbpstMf_oRUWbIDZZBuh_LREN4L4MPSOvrlOnfX3gyBqBb852B3bmCy0M5HUEqUboBHwU25pqBMuRbqcmE0MTv3l2eS3VGDRs5qylVm_MZDJY_bXxH0SClhpicmHWXMCXt8f-jcly1bOcLYH3I5cjKkjWBHY7JrhbrV3s-Qd3oprMIfFKj5widW5E0Hf7NKFe9KE20ie0WMdpZTqj5RRi82HouuiPKu7MxYZPnS2UOoI4KqMWzYp0O9BwEyA8BDqKtI31zf1EmAKeTLz4o6FJzr3lZRx3NT0D9XnG4DI5Ua35AOPbQ1zbktsUitmQRyTaedi39lZj2BcndFRPQ0VT43Q11yp7tYMCiDxWJjc5AuES0eEk0z6SiLqA6E1NVc0kowpe1U",
+      "status": null,
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "inventory-agent",
+        "version": "3"
+      },
+      "response_id": "resp_00b8343d8d43532c006ac52a3cf4388190be63dca654106bba"
+    },
+    {
+      "arguments": "{}",
+      "call_id": "call_mwGHtGXBVWRjixsWkVqSbIOt",
+      "name": "get_weekly_sales",
+      "type": "function_call",
+      "id": "fc_00b8343d8d43532c006ac52a40f01c819096164057b5f85afa",
+      "caller": null,
+      "namespace": null,
+      "status": "completed",
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "inventory-agent",
+        "version": "3"
+      },
+      "response_id": "resp_00b8343d8d43532c006ac52a3cf4388190be63dca654106bba"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "temperature": 1.0,
+  "tool_choice": "auto",
+  "tools": [
+    {
+      "name": "get_inventory_levels",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "strict": true,
+      "type": "function",
+      "allowed_callers": null,
+      "defer_loading": null,
+      "description": "Returns current inventory for all products.",
+      "output_schema": null
+    },
+    {
+      "name": "get_weekly_sales",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "strict": true,
+      "type": "function",
+      "allowed_callers": null,
+      "defer_loading": null,
+      "description": "Returns number of units sold last week.",
+      "output_schema": null
+    }
+  ],
+  "top_p": 1.0,
+  "background": false,
+  "completed_at": 1791306305.0,
+  "conversation": {
+    "id": "conv_00b8343d8d43532c009XWPdBNKEy9WCBWXYH0Rb8X1hq8w6Dsk"
+  },
+  "max_output_tokens": null,
+  "max_tool_calls": null,
+  "moderation": null,
+  "previous_response_id": null,
+  "prompt": null,
+  "prompt_cache_key": null,
+  "prompt_cache_options": null,
+  "prompt_cache_retention": "in_memory",
+  "reasoning": {
+    "context": "current_turn",
+    "effort": "medium",
+    "generate_summary": null,
+    "mode": "standard",
+    "summary": "detailed"
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "status": "completed",
+  "text": {
+    "format": {
+      "type": "text"
+    },
+    "verbosity": "medium"
+  },
+  "top_logprobs": 0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 317,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 160,
+    "output_tokens_details": {
+      "reasoning_tokens": 128
+    },
+    "total_tokens": 477
+  },
+  "user": null,
+  "agent_reference": {
+    "type": "agent_reference",
+    "name": "inventory-agent",
+    "version": "3"
+  },
+  "content_filters": [
+    {
+      "blocked": false,
+      "source_type": "prompt",
+      "content_filter_results": {
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "filtered": false,
+          "detected": false
+        }
+      },
+      "content_filter_raw": [],
+      "content_filter_offsets": {
+        "start_offset": 0,
+        "end_offset": 729,
+        "check_offset": 0
+      }
+    },
+    {
+      "blocked": false,
+      "source_type": "completion",
+      "content_filter_results": {
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_text": {
+          "filtered": false,
+          "detected": false
+        },
+        "protected_material_code": {
+          "filtered": false,
+          "detected": false
+        }
+      },
+      "content_filter_raw": [],
+      "content_filter_offsets": {
+        "start_offset": 0,
+        "end_offset": 664,
+        "check_offset": 0
+      }
+    }
+  ]
+}
+INPUT LIST SENT TO AGENT:
+[
+  {
+    "type": "function_call_output",
+    "call_id": "call_mwGHtGXBVWRjixsWkVqSbIOt",
+    "output": "{\"Moisturizer\":22,\"Shampoo\":18,\"Body Spray\":3,\"Hair Gel\":2,\"Lip Balm\":14,\"Skin Serum\":19,\"Cleanser\":4,\"Conditioner\":1,\"Setting Powder\":13,\"Dry Shampoo\":17}"
+  }
+]
+Agent response: Yes. Based on inventory < 10 and weekly sales > 15, restock these products:
+
+- Moisturizer (inventory 6, weekly sales 22)
+- Shampoo (inventory 8, weekly sales 18)
+- Skin Serum (inventory 9, weekly sales 19)
+
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER: Which products would you recommend for clearance?
+
+--- Response ---
+{
+  "id": "resp_00b8343d8d43532c006ac52b581f888190b7dd5bfcd52edb9d",
+  "created_at": 1791306584.0,
+  "error": null,
+  "incomplete_details": null,
+  "instructions": "\n                You are an inventory assistant. Here are some general guidelines:\n                - Recommend restock if item inventory < 10  and weekly sales > 15\n                - Recommend clearance if item inventory > 20 and weekly sales < 5\n                ",
+  "metadata": {},
+  "model": "gpt-5",
+  "object": "response",
+  "output": [
+    {
+      "id": "rs_00b8343d8d43532c006ac52b59fc4081908f5a9be0886971e2",
+      "summary": [
+        {
+          "text": "**Recommending clearance items**\n\nI’m looking to recommend clearance items based on the guidelines that say to suggest items with inventory over 20 and weekly sales under 5. From the inventory and sales given, I assessed each product. The Body Spray and Cleanser meet the criteria, as the Body Spray has enough inventory and low sales while the Cleanser has adequate inventory with weekly sales just under 5. So I'll recommend those two for clearance!",
+          "type": "summary_text"
+        },
+        {
+          "text": "**Providing succinct results**\n\nI need to present succinct results, possibly including their metrics in parentheses for clarity. It might also be helpful to ask if the user wants suggested markdown levels. I don’t need to call any tools again, so I’ll focus on crafting the final message. It’s important that my guidance aligns with the developer guidelines, so I’ll make sure everything is consistent. Now, I just need to put it all together!",
+          "type": "summary_text"
+        }
+      ],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqxStiBRV7Un0NbuQfMVw4ldwQMioNqB3kxPQ46EBfMyIq43C0g_wo66saQZBnbyubNW8AKB1ueGZnys5yp45sjEvwi7EPV5CZ6TSccFtHC0eeYZDME8Pe7ckFVhpWKen738uPnq25hW2_SKv7H6L1rOq3fW8BZDau3WacTW53mrbgLv8AWXB6E2ICoOw56bj4NjM2mihzxNLAsDC-sOZl2J5WUeQWvObOjqXAE9I6xma4u4kb9jk0N5EbuYIvhwMXH_KkplFKMxaT0S3nNIzjWCJzw5pwQlE3ySBB-tK6OiwDuTKD0gFHpDPzvC_WtYQQuqJNGK1b6BIEkg-xQnbaxJgsxkPiqA0omMS5DwaC8Er43hGNc5Gjah9shu6jsH0CCHYAAuwGSsVcNoEMUkKu2b495FTMvR1-f0fZTmjSXZCVNDn11u8JfxwAuFbMaCMWnN3UjOVFhteWP3JXdxhOhkytM4fdjcZucMR-IpWDZsGnPzxsO0PEzLUwbm1sQJTbmQ_rrnKmoWVgoGJIbdhuR3OiwiWvG1Ecz-QLyu4hQNGsnYjXxwKIfSPTgI7g0kmjRIRBfIbLo8mHx-xqm0pLGzEl-q0Ui0cGOsZ6NDOkPT4Nu2yqafp7kfOC7wnvR7LV3VvJID2CvSkemKdaIujXzQETl02cBi5seCXC21B5WDL73VmLb0bHeQw-nUa7o_ct86i9AdAds5o5jdEBlyX6VMtUzgQZQbatvbsCTOEu-Rg9DhWQZIDeZNm38D-z9iwk0CMCd9pfY3TsAmQ83znlmkuM0VlJEJiypO0ozmRH_Uka72HW4ImBGB0a_-lMERGUF0vzUwp_P7LDGto2fDxxsZb2mhTVkHOC8zDVYCvTyr7fZET-41zTFk3wG9Q22EvJys6JN6_YlZSzVqnn3ISwtJgn3qaEj5Qh1hsokRxmWRe2qbToXInFZmq2FSjzTadPTszXxumHlyDm_NUN_HnLV-kTPpXtpxecERSWAdDjym4xSMagtQ1bYviz_lh6NkIFrK0MqpRjRiys0on9oLEKOqW--LNfIXqZgGGNK0DF64p3HDaB1_sCsJNX995Qiv6NsXPy-hwzAcSzz2oC9zSOCwEVF_Nq9cZ3WDSCyFhxeqdi4BDS_dDb8-SXjj3HCG-Aoz_ZlgHSl0T7hcaIUppcyaufhaK9Vz4IG2cbL9mukGecB93lv4_ZvqVy-lPm9qGhYJnbgOSx8dFLz38w913FGDTGJifK898afeIhCtdtyVDPJoFc9BJuBmYPn0oZwdlewfqVjIzQBGTRFkb01hc4EbxEvLg8D3HfH_3GedAkjD-nJrWfYN5vZLdD9-u_YfEZ1cSuf2Om0RR7tofg7pD0BzRTSgWUTCg2I0o-Rht3bY8k53TLQ4pyIZcyGx41r8N37NzFxmCjQ5qtgMcvNLcQqPS4QRg2oWp_NjZ7QwLIKTleG8knVPsu1gQ7DiW-tSzxx4W9hXXRNmUiFaxwHkQlUGO4_P6IioWnqgOs3K9YP8rviynSYRt45ru5G5Gioiyi4Km1wr6HOUSw9IoC9cEHHSXPwkDVCXHNRorMeoaDjBry4GEohDY5xLN8e7IB0OOKg-M8IgOAomatiC5bd-dRQVmtrwUr__LuslanfLt-BvdHbdoj5IeavWXZgVJrxAkLYuAtkasQxtGYmf1WCtbmHhGWef_eMn3viidIqZ3LfhZ2BpGLyF48aqVNNDzR-KkYTQgayxfkmRAxsOVHgzFaYRleYRyQVolM8sq05tR-dS4Yg9K3ynRVr4SU2bO81oyV2fY01g8N1bDWfVU0ijZjXo03RnW9gAcDOhYAjtKa3kwBLfytOYgBrg74VBNEhpGr7SZbYfN50RInMuFBFuQbUaev-GhndHJhJtnyxlxIqihc3rR1qy_l_X-dUvZKGl--VqdBYOts1mEZoFRnm8x54K7MIjMde_DxR0QiTtJDHBWGaGE4CJ98r3kHhTcYQ_Tpm_2_bqZcBIqlIydxdXH4rYTIKU_p4fSR1NjCyHizRCTG22M9jhwc3tgVFQYVOcWUeB18Z579HEMrb-_AX055gqWjnFiEIUHV1_Y0D3Juzf9G0SXHNkl_0pbNId4ih_BkGHamam1GfroXMDt_fxRwCLv6_jKQv5ML5ykeDNXmi4iDx2GBpdiL-P8NW4oBHCA2R6vYEDOsIOQdzgx5rjg1bfU-AP09XiNQka-Ie_8XP5M8_bXKTh7-gTF7RSK0t7xsCDWYK9-v3ugcQzu-JlJFt348Z7VeTQxNFpl4tr0u8vfMIp5Y_-Yq8Yk59Sy9sjF_sXds9gFh9ibrmeAxPeBsP-b3-Ajyubpm0jCvht2mmRpKc_ov60E4JE5UCd5CU6DNuXRFPQcRR9GNZnj9Nc9CwYYLTugopake55YvDl_vhOq6iYAxeuLH3Gl9NduPafMrABbDNojnyTwBEslrAYsNaFe7RLMgohshZvrye7p4CEZ4zje5SFaBYNH1erzFQtZyoAh_SUErWiQctc9hCkP3wuX6tUycmHXokUp3DGjsv5o6HgiJ0U72UNEfRSzVXQ5vz1YgWfZqzi5yxrXzAzqcejnqqUBGwCXgTncJAO0R3TwT1YmdS1XCgCHkm-g5Sw8ZRR1m1GHjQ63TJ5cKG4po95BGLJkdxo1QcaypSa_bH62F-BXmefmQum4PWK3jN93f7KCsh0bx31goHFMklcQSKc4RaaOZlg3CcLJzvH4ZLclkrbtr9t9GLXZ7cej-Ks1Q13b2LLHbye-hgkymOR512uza1GNkBAbux9ooQLOo3nUjJCD6vC2cppkYfAFw_8qicuqWcpF4OPfayJ6MNoqeK1F_oSeOvWoBWjeudsxb0PgLw_6lFD8wY7gleK6d-vdKn0k7U47DkfcPKaFTYgmXBSpND32PC8hLhtm5_7SJluayBkSmeoTBIxxFja92Rtm6cVoh",
+      "status": null,
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "inventory-agent",
+        "version": "3"
+      },
+      "response_id": "resp_00b8343d8d43532c006ac52b581f888190b7dd5bfcd52edb9d"
+    },
+    {
+      "id": "msg_00b8343d8d43532c006ac52b60ed8c8190bde58dd3a60e4e00",
+      "content": [
+        {
+          "annotations": [],
+          "text": "Recommend clearance for:\n\n- Body Spray (inventory 28, weekly sales 3)\n- Cleanser (inventory 30, weekly sales 4)\n\nThese meet the criteria: inventory > 20 and weekly sales < 5. Want suggested markdown levels or a clearance timeline?",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": null,
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "inventory-agent",
+        "version": "3"
+      },
+      "response_id": "resp_00b8343d8d43532c006ac52b581f888190b7dd5bfcd52edb9d"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "temperature": 1.0,
+  "tool_choice": "auto",
+  "tools": [
+    {
+      "name": "get_inventory_levels",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "strict": true,
+      "type": "function",
+      "allowed_callers": null,
+      "defer_loading": null,
+      "description": "Returns current inventory for all products.",
+      "output_schema": null
+    },
+    {
+      "name": "get_weekly_sales",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "strict": true,
+      "type": "function",
+      "allowed_callers": null,
+      "defer_loading": null,
+      "description": "Returns number of units sold last week.",
+      "output_schema": null
+    }
+  ],
+  "top_p": 1.0,
+  "background": false,
+  "completed_at": 1791306593.0,
+  "conversation": {
+    "id": "conv_00b8343d8d43532c009XWPdBNKEy9WCBWXYH0Rb8X1hq8w6Dsk"
+  },
+  "max_output_tokens": null,
+  "max_tool_calls": null,
+  "moderation": null,
+  "previous_response_id": null,
+  "prompt": null,
+  "prompt_cache_key": null,
+  "prompt_cache_options": null,
+  "prompt_cache_retention": "in_memory",
+  "reasoning": {
+    "context": "current_turn",
+    "effort": "medium",
+    "generate_summary": null,
+    "mode": "standard",
+    "summary": "detailed"
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "status": "completed",
+  "text": {
+    "format": {
+      "type": "text"
+    },
+    "verbosity": "medium"
+  },
+  "top_logprobs": 0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 481,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 470,
+    "output_tokens_details": {
+      "reasoning_tokens": 384
+    },
+    "total_tokens": 951
+  },
+  "user": null,
+  "agent_reference": {
+    "type": "agent_reference",
+    "name": "inventory-agent",
+    "version": "3"
+  },
+  "content_filters": [
+    {
+      "blocked": false,
+      "source_type": "prompt",
+      "content_filter_results": {
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "filtered": false,
+          "detected": false
+        }
+      },
+      "content_filter_raw": [],
+      "content_filter_offsets": {
+        "start_offset": 0,
+        "end_offset": 1305,
+        "check_offset": 0
+      }
+    },
+    {
+      "blocked": false,
+      "source_type": "completion",
+      "content_filter_results": {
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_text": {
+          "filtered": false,
+          "detected": false
+        },
+        "protected_material_code": {
+          "filtered": false,
+          "detected": false
+        }
+      },
+      "content_filter_raw": [],
+      "content_filter_offsets": {
+        "start_offset": 0,
+        "end_offset": 1565,
+        "check_offset": 0
+      }
+    }
+  ]
+}
+Agent response: Recommend clearance for:
+
+- Body Spray (inventory 28, weekly sales 3)
+- Cleanser (inventory 30, weekly sales 4)
+
+These meet the criteria: inventory > 20 and weekly sales < 5. Want suggested markdown levels or a clearance timeline?
+
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER: What are the best sellers this week?
+
+--- Response ---
+{
+  "id": "resp_00b8343d8d43532c006ac52ccc725081908117e7b41d544f31",
+  "created_at": 1791306956.0,
+  "error": null,
+  "incomplete_details": null,
+  "instructions": "\n                You are an inventory assistant. Here are some general guidelines:\n                - Recommend restock if item inventory < 10  and weekly sales > 15\n                - Recommend clearance if item inventory > 20 and weekly sales < 5\n                ",
+  "metadata": {},
+  "model": "gpt-5",
+  "object": "response",
+  "output": [
+    {
+      "id": "rs_00b8343d8d43532c006ac52cce48fc8190af1c58a0d5f4cd16",
+      "summary": [
+        {
+          "text": "**Calculating top sellers**\n\nI need to answer the user's question about this week's best sellers by looking at our weekly sales data. Best sellers likely means items with the highest sales, so I'll focus on the top few. The user didn’t specify how many, but I’ll go with the top 5 for conciseness. I’ll sort the products by weekly sales in descending order, and the top 5 are Moisturizer (22), Skin Serum (19), Shampoo (18), Dry Shampoo (17), and Lip Balm (14).",
+          "type": "summary_text"
+        },
+        {
+          "text": "**Finalizing best sellers list**\n\nI’m considering mentioning the Setting Powder, which has 13 sales and is close to the top. It makes sense to present the top 5 best sellers while keeping it concise. I won’t need to call any tools since I already have the sales data. It’s likely the weekly sales are still current. I could also check if sales over 15 are included in a restock, but for now, I'll focus on the highest weekly sales. I'll use a simple bullet list to present the ranked top 5 clearly.",
+          "type": "summary_text"
+        },
+        {
+          "text": "**Presenting top sellers**\n\nI’m deciding to stick with a top 5 best sellers list since the question is straightforward. I might mention the possibility of a tie or even ask the user how many best sellers they’d like, but for now, I’ll just go ahead and list the top 5 based on units sold. Here’s what I have:\n\n1) Moisturizer — 22  \n2) Skin Serum — 19  \n3) Shampoo — 18  \n4) Dry Shampoo — 17  \n5) Lip Balm — 14  \n\nI'll also include an honorable mention for Setting Powder with 13 sales. Keeping it concise is key!",
+          "type": "summary_text"
+        }
+      ],
+      "type": "reasoning",
+      "content": [],
+      "encrypted_content": "gAAAAABqxSzYhXiggjD9o2w-tryumgNXiu23m2WCubPOOinVvgST3nBSyWgXPd2Twa1aBrTfxgv3sTM2NickoWbviM7V5yK0rFGFBMWA1D6_yi9jA7Ou2JXBP7t0D3hsDpXCGSatUSk2GV7OaDaYuuDa8la9Ej_JUxx0fYgMq5A1i23L9UwEGvnh8wGnbT4e5mFqDimaBEC6Y55WLco-uu2jeGM_wrDFm8Hk99zjIfxwrrFSg-LILmcgtD6Qpd82iMu9rrU2ZJY7Pf1yxOpT-F53ugkfv_e6MzFc8gMivP69WbDA4anA13FsD7L2bMt4SAVMF3OXAVSEC8C2RDaTqI0ySo9aewcD-HSuWeRiW9Wj-Z5QROga5SN-hGGNM-r0dJszUSJF0JP33CIIMQd33Ss6p0DbzZyyffrGHe3Qms9dPV7btU_QQCiVYdWExo6K7hu5OqPb9GACrrw0LFjVvVfoQXBJ5ta25QTb-I68iaxp7fhW4VfQBbJWLnEBz2FxYeouhraHfX-XfyNLhscrA7_O0XtNG-h8of2JI3MXpw_mSGiyagG-2btUDnJrdKUvJFSft7sqAEjTw6ZLmQh1wboIZQ77bcgq1apyQf_RcjNBQj8rvmGEuCCvWU75FU1kPzg0wwu-seqtI6jPZjLqWAALECGEcrytl7KuHGeWUxQUaTfHDEbXX7wyaW6ARif7ZAVcaAcQUQPnEWUGad8buVLCK6IA0VUhEPQs_I565otx7hqdGjRNKK0xwK_eZLiU_Mrh9g4RcDr76QsZ91CBxryFP3MgsZKpyuSLolN9RhmmS1rSkTG1mm80HIUL92MzDGOc_uN29X8VFrn_9X1iyhAfC5dBkT-3BGQ34A7aKpYiWqiQzdirmG-0eEV-TWqDadzQKJL4iU05kNROl_oTvkdnyiG1vZxU1l_jQFuYDIDIf8OWJJVdX-hWMxirYnEem3rvLXILiJDaGvbkUrUhPuoqBDEWtLgV6xrYVM75Vjg4phez8dmaFGdQazgo7BinbjhGL_MV_xOcVmj-Q6ip07s5vLDc3GZskO6USynMAV21xp4H-7dDA6SFTdkF4hZS7H7eUgeS624XJEb7VzaA_jr66Fluz2Yson4pWYS8Ae35hFFsr2vqSWZ8t4T2ki_VSiwDd09YABt6ZAgeNEHeWT6YoJTfeObrx1FLCkrpIu93lpkW2NdQLkecyS2pz6sMD3II7vuU-U2LtYKSPwOiS-yWkHF-Nu-CRyfIRA2AU1u7WRN2lmgju2cuoI2z0U3GsjbobA9SGh8IKKpelnwgZTvAFXZiwjPyydHKidPRqxVMIGdq1evvk-tOsJvzYfOUiQwkSdSAYd5ihu3sSWms_2-3XqdA08koXNCpDgxr2G8RtVF34485Cm2wnom3NrT1gOTqEa8SNeYKZHjYt1Lqw1FipkQ1JDCdES0OpWoi1ehCF3yRQS5IVNRQuIloO8RrsKdeIl0hxWBunWmmC6V7uKuLyND3d5n3op8T6Z_HvTgyVTVMamZVxGPHkn9yAU23U_6k7BDlDR7A_CHRM8ZT78qrvbQwWYCvzMBp_9pAJANZB2mCWqV-1aLl7LEc0gk9gdZZQNwXuSLHHpy4Fy3LlcuivKhX_M3_JKLxJKoGwNJczrgNo59lBiGnk1SwaNxwD-9ldPDudWA3VooVD6AvocC-LDu_mbS_B4XHNGMLhwIFNxWKGSPGmv1hgOxcdKxchx3cZnMFZ8xespchX6JeqeeWD6SIpez-74uBxJ799vwgfGxfWzfWhdDynfvnno9Y5QGBvEZFLmyd7dP9Yrna2SETVspWdzE560QoUTm3pYMR-tEUJ2pX5qlCMBy0uItn-FnRikdK1ZM0qj6xifoSeVISfPcngeo_vNe4wfeQR1eO-IIgAOz8otrRLVvgtkvrr_WJ6NhYvRhl-P5S2iiiAsrLJuClM7ZhHq-rqZBBi54kbtYOLYx26JfOd_s-2eoGISeCDgyNTJD_BRa7IFMHh9UqP-XG33db3EyXlDwMlW6jpD-tdhaxxQO9Rudqnfn_fnpW5wrMy_JgmBiGQH_1xDf6BwOMKFFPjoIFhdAhym_Y-4k4Xpdxjp5JYNlCQ5Keu3cQCUTj_0dUFaVMVK1uReZjeei7xrAh7f3koT0x24oFIYOByWRhemi7NMcZKPHlpXHA6maCsKvYskGf0QMWRmmcpuXtu45VGGokoyNTqLDUD9rIl0zWgtwCfu0Gi8TzSoBAfXkC-Nr85kvG19IlOkQ4o6FT1WQT3IpWSL4i7h2V-Wp2TmAQpLQokJmrXG90pFpcp4PMm-kBhvBktQGvOcv492kSCHTGuXDXJyNSgjnY_AZVI-2832r90YgyMqmdlHUdJkPKY_HmRXlalDJ_WNI88rzzHWj6aoSFGG4Z0duDDoxErvd3O5maTeFLdUPvO9s8DRwwlbh7Y9HmWRz8pxzHpZakqVn1CN6gfdn5whbqrYQoK-TjlchIEdSGr2pYeiOk4bcHS1bkzWAPRQaO43fhOkquW6TC6YF72oLptTKG1WZ8uQGoToghpAJT4L8Nn394t1Qx8rJcX0FSqvGulgpzjGIAh47qsl6Zhdg35odReHO1TbAIOyKeez93NbLajOUUtLTQdFufthkgWvbHR5oGbdCKlP1k62cyf1vYmHVup229a22im0C7utCH3jKndRQUYn-3ggZO0nb4G2GfgBGb2yUHZ5o-uIDDqc-pik4bvmQJ4cB5BtVNwODrZy4Teej4PaxarRNSPVLPI8Re1tNO5D1bmc3_zxbLasZQRqFUZzGuvI7Gy0QuWyz18_EfGY2obchPZIXUlvQfNk7MtNq6GmBxWZJ0z49xLs532GN7JG7lgg6fv6gm3YJMbdgCXkvb6z7AlI-XQseE2tDAL8MyEPR_0fU1J_8o4ciuq0L9XuVa3nwNa6_AS5tYVp_WUR_LU_pvt3ZCgflrQTrsbrcusQljHN8hv712e405pRZftxuBHj2gEdk_xK3BUEb1KxBrBBOkMClep8d0sayTxB83aBLX0mWlvR-Gc1xoSlNFTJlcJn1i6iFsiGaDdU3hUOHbk1oOaFhBYZbTCzePaIon272WAZ2JPUMtGYASH75VjvhesLNSryaiBvUmGJKr47ygtMeUpz6mnj4Gb2wOJeIqJg5AauxcSK6H-w7nd1UvQVSAXWIOlX_LHMcXcbcrEpbQX96BVsxtxaOKedQ-huVkg3hN6iNufKzSWkdwxjjad_C-ubQ1fGuUHneRr65we0miK3WecX79GYurZy2hezZnl34Kitiq4XYIuuV-zFP98rqPoVIH2_rzGHA8ycQKKUiR3SzzlWWgplQkKVNRj7ttwCsWPNTB2nRQ17GDDIG19v9EwqG9pRhYK8ibhmlv2cIpprmFUI0NlW6o55ywpwZt7I0TvAxcztCQ0tOn28cQwFIuN9OIaW_6jSZk-5JDqrgEAgq2snAamRraDK_0c6B4Q1HaUvLbwz55uAkOXz6BJzDGBFeJsxw_-ZbAGCuff4x6VsjP9J2A4VcAu_XyjvyUghyRybYO7hfWFKZSt_UmlWW84FSyDTkVCQfIq7xgnNEO5A8A4JNAmQxb275cUxEbm9ySjXGV0CiXpoCG4uLs9hsY2rLyRnxgUhgZCgjMmxrHctDwjsgTgyQP30v4vAKrsJ6HD9tDZNdHd8_sBUSRidNp4qeHt74UbfWeWNYy7YBlEw_y5mXfTrM9kkm47RIkTj-XEg1uEVOZKtTtTlmc-Es-tNGGY0gYRTN2JOMaV7blOMtTWLmflpUzG_mzQ42_OBGAqhsfvUbFaIncncdue6ESJT_-H8tm5YKcqQRZoEHRVXS5WMyiVHpc-lkKndIn10119uizFkPFyuWEs799uxET8QH5LX7uLcEx1BK1exefewYsG5ldiqEr9hqrFYHwodEK6MWiWokoSOZMfxoxeTo1ZkETiHJXa55I5rAk1L91x5FYfoZngv8aU4uTchQWOd5E7CZe_931zeXfw4QRvn3fe-YvGzlnmTk9GoB3AGBC8AekwFLu_JzPtwIrTtqjEcnfglPeX72Mo9RcNeRfKajCpm1drCsB3vzJIdIu-cX53lhurQkEDrJLtLbri82OT4s8xDSF9yh6b8CnGVGcu6lpFoxW8B8H2TdZxwS0FTDEu8ItGGckVhUCdm4n_Xx4W4SP7cFdXQ==",
+      "status": null,
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "inventory-agent",
+        "version": "3"
+      },
+      "response_id": "resp_00b8343d8d43532c006ac52ccc725081908117e7b41d544f31"
+    },
+    {
+      "id": "msg_00b8343d8d43532c006ac52cd7e7cc819091f28503eaae79b1",
+      "content": [
+        {
+          "annotations": [],
+          "text": "Top sellers this week (by units sold):\n\n1) Moisturizer — 22\n2) Skin Serum — 19\n3) Shampoo — 18\n4) Dry Shampoo — 17\n5) Lip Balm — 14\n\nRunner-up: Setting Powder — 13\n\nWant this filtered to a specific top N or category?",
+          "type": "output_text",
+          "logprobs": []
+        }
+      ],
+      "role": "assistant",
+      "status": "completed",
+      "type": "message",
+      "phase": null,
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "inventory-agent",
+        "version": "3"
+      },
+      "response_id": "resp_00b8343d8d43532c006ac52ccc725081908117e7b41d544f31"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "temperature": 1.0,
+  "tool_choice": "auto",
+  "tools": [
+    {
+      "name": "get_inventory_levels",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "strict": true,
+      "type": "function",
+      "allowed_callers": null,
+      "defer_loading": null,
+      "description": "Returns current inventory for all products.",
+      "output_schema": null
+    },
+    {
+      "name": "get_weekly_sales",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": false
+      },
+      "strict": true,
+      "type": "function",
+      "allowed_callers": null,
+      "defer_loading": null,
+      "description": "Returns number of units sold last week.",
+      "output_schema": null
+    }
+  ],
+  "top_p": 1.0,
+  "background": false,
+  "completed_at": 1791306968.0,
+  "conversation": {
+    "id": "conv_00b8343d8d43532c009XWPdBNKEy9WCBWXYH0Rb8X1hq8w6Dsk"
+  },
+  "max_output_tokens": null,
+  "max_tool_calls": null,
+  "moderation": null,
+  "previous_response_id": null,
+  "prompt": null,
+  "prompt_cache_key": null,
+  "prompt_cache_options": null,
+  "prompt_cache_retention": "in_memory",
+  "reasoning": {
+    "context": "current_turn",
+    "effort": "medium",
+    "generate_summary": null,
+    "mode": "standard",
+    "summary": "detailed"
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "status": "completed",
+  "text": {
+    "format": {
+      "type": "text"
+    },
+    "verbosity": "medium"
+  },
+  "top_logprobs": 0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 554,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 642,
+    "output_tokens_details": {
+      "reasoning_tokens": 512
+    },
+    "total_tokens": 1196
+  },
+  "user": null,
+  "agent_reference": {
+    "type": "agent_reference",
+    "name": "inventory-agent",
+    "version": "3"
+  },
+  "content_filters": [
+    {
+      "blocked": false,
+      "source_type": "prompt",
+      "content_filter_results": {
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "filtered": false,
+          "detected": false
+        }
+      },
+      "content_filter_raw": [],
+      "content_filter_offsets": {
+        "start_offset": 0,
+        "end_offset": 1647,
+        "check_offset": 0
+      }
+    },
+    {
+      "blocked": false,
+      "source_type": "completion",
+      "content_filter_results": {
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "protected_material_text": {
+          "filtered": false,
+          "detected": false
+        },
+        "protected_material_code": {
+          "filtered": false,
+          "detected": false
+        }
+      },
+      "content_filter_raw": [],
+      "content_filter_offsets": {
+        "start_offset": 0,
+        "end_offset": 2444,
+        "check_offset": 0
+      }
+    }
+  ]
+}
+Agent response: Top sellers this week (by units sold):
+
+1) Moisturizer — 22
+2) Skin Serum — 19
+3) Shampoo — 18
+4) Dry Shampoo — 17
+5) Lip Balm — 14
+
+Runner-up: Setting Powder — 13
+
+Want this filtered to a specific top N or category?
+
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER: quit
+Exiting chat.
+Cleaning up agents:
+Deleted inventory agent.
+Press any key to continue . . .

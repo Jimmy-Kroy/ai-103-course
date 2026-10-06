@@ -120,6 +120,8 @@ async def chat_loop(session):
                 conversation=conversation.id,
                 extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
             )
+            print("\n--- Response ---")
+            print(response.model_dump_json(indent=2))
 
             # Keep going while the model is asking for tool calls
             while True:
@@ -149,6 +151,9 @@ async def chat_loop(session):
                 # No tool calls this round -> the model has given its final answer
                 if not input_list:
                     break
+
+                print("INPUT LIST SENT TO AGENT:")
+                print(json.dumps(input_list, indent=2, default=str))
 
                 # Send the tool results back and get the next response
                 response = openai_client.responses.create(
