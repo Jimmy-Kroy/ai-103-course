@@ -1,0 +1,37 @@
+Agent created (id: MyAgent:1, name: MyAgent, version: 1)
+Created conversation (id: conv_0cb0e4d9e1f8ea0c00tW400ceFRWboPCLN0ugTIUUozDlF4qyq)
+
+Agent response: Below are Azure CLI examples to create an Azure Container App and enable a managed identity (system-assigned or user-assigned). Replace placeholders with your values.
+
+Setup (once)
+- az extension add --name containerapp --upgrade
+- RG=my-resource-group
+- LOCATION=eastus
+- ENV_NAME=my-aca-env
+- APP_NAME=my-container-app
+- IMAGE=mcr.microsoft.com/azuredocs/containerapps-helloworld:latest
+
+Create resource group and Container Apps environment
+- az group create --name $RG --location $LOCATION
+- az containerapp env create --name $ENV_NAME --resource-group $RG --location $LOCATION
+
+Option 1: Create with system-assigned managed identity
+- az containerapp create --name $APP_NAME --resource-group $RG --environment $ENV_NAME --image $IMAGE --ingress external --target-port 80 --system-assigned
+
+Option 2: Create with user-assigned managed identity
+- IDENTITY_NAME=my-app-identity
+- az identity create --name $IDENTITY_NAME --resource-group $RG
+- IDENTITY_ID=$(az identity show --name $IDENTITY_NAME --resource-group $RG --query id --output tsv)
+- az containerapp create --name $APP_NAME --resource-group $RG --environment $ENV_NAME --image $IMAGE --ingress external --target-port 80 --user-assigned $IDENTITY_ID
+
+(Optional) Assign identity after app creation
+- System-assigned: az containerapp identity assign --name $APP_NAME --resource-group $RG --system-assigned
+- User-assigned: az containerapp identity assign --name $APP_NAME --resource-group $RG --user-assigned $IDENTITY_ID
+
+Verify identity on the app
+- az containerapp show --name $APP_NAME --resource-group $RG --query identity --output json
+
+Notes
+- You can pass multiple user-assigned identities as a space-separated list to --user-assigned.
+- If the app needs to pull images from Azure Container Registry using managed identity, use --registry-identity system for system-assigned or --registry-identity <IDENTITY_ID> for user-assigned and ensure AcrPull role is granted to that identity.
+Agent deleted

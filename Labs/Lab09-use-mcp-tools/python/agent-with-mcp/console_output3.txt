@@ -1,0 +1,47 @@
+[10/06/26 17:53:18] INFO     Starting MCP server 'Inventory'   transport.py:242
+                             with transport 'stdio'
+
+Connected to server with tools: ['get_inventory_levels', 'get_weekly_sales']
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER: Show me the current inventory levels for all products.
+Agent response: Here are the current inventory levels:
+
+- Moisturizer: 6
+- Shampoo: 8
+- Body Spray: 28
+- Hair Gel: 5
+- Lip Balm: 12
+- Skin Serum: 9
+- Cleanser: 30
+- Conditioner: 3
+- Setting Powder: 17
+- Dry Shampoo: 45
+
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER: Are there any products that should be restocked?
+Agent response: Yes. Based on current inventory and last week’s sales, these products should be restocked:
+- Moisturizer: inventory 6, weekly sales 22
+- Shampoo: inventory 8, weekly sales 18
+- Skin Serum: inventory 9, weekly sales 19
+
+No other products meet the restock criteria (inventory < 10 and weekly sales > 15).
+
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER: Which products would you recommend for clearance?
+Agent response: Yes. Recommend restock for:
+- Moisturizer — inventory 6, weekly sales 22
+- Shampoo — inventory 8, weekly sales 18
+- Skin Serum — inventory 9, weekly sales 19
+
+These meet the restock criteria (inventory < 10 and weekly sales > 15).
+
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER: What are the best sellers this week?
+Agent response: Recommend restocking:
+- Moisturizer — inventory 6, weekly sales 22
+- Shampoo — inventory 8, weekly sales 18
+- Skin Serum — inventory 9, weekly sales 19
+
+These meet the criteria: inventory < 10 and weekly sales > 15.
+Enter a prompt for the inventory agent. Use 'quit' to exit.
+USER:
