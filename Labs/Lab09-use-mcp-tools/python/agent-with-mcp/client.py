@@ -103,62 +103,61 @@ async def chat_loop(session):
         # Create a thread for the chat session
         conversation = openai_client.conversations.create()
 
-        # Create an input list to hold function call outputs to send back to the model
-        input_list: ResponseInputParam = []
-
         while True:
             user_input = input("Enter a prompt for the inventory agent. Use 'quit' to exit.\nUSER: ").strip()
             if user_input.lower() == "quit":
                 print("Exiting chat.")
                 break
 
-            # Send a prompt to the agent
+            # Add the user's prompt to the conversation
             openai_client.conversations.items.create(
                 conversation_id=conversation.id,
                 items=[{"type": "message", "role": "user", "content": user_input}],
             )
 
-            # Retrieve the agent's response, which may include function calls to the MCP server tools
+            # First request: no stale input, the conversation already holds the prompt
             response = openai_client.responses.create(
                 conversation=conversation.id,
                 extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
-                input=input_list,
             )
 
-            # Check the run status for failures
-            if response.status == "failed":
-                print(f"Response failed: {response.error}")
+            # Keep going while the model is asking for tool calls
+            while True:
+                if response.status == "failed":
+                    print(f"Response failed: {response.error}")
+                    break
 
-            # Process function calls
-            for item in response.output:
-                if item.type == "function_call":
-                    # Retrieve the matching function tool
-                    function_name = item.name
-                    kwargs = json.loads(item.arguments)
-                    required_function = functions_dict.get(function_name)
+                # Fresh list for THIS round of function calls only
+                input_list: ResponseInputParam = []
 
-                    # Invoke the function
-                    output = await required_function(**kwargs)
+                for item in response.output:
+                    if item.type == "function_call":
+                        function_name = item.name
+                        kwargs = json.loads(item.arguments)
+                        required_function = functions_dict.get(function_name)
 
-                    # Append the output text
-                    input_list.append(
-                       FunctionCallOutput(
-                          type="function_call_output",
-                          call_id=item.call_id,
-                          output=output.content[0].text,
-                       )
-                    )
+                        output = await required_function(**kwargs)
 
+                        input_list.append(
+                            FunctionCallOutput(
+                                type="function_call_output",
+                                call_id=item.call_id,
+                                output=output.content[0].text,
+                            )
+                        )
 
+                # No tool calls this round -> the model has given its final answer
+                if not input_list:
+                    break
 
-            # Send function call outputs back to the model and retrieve a response
-            if input_list:
-               response = openai_client.responses.create(
-                     input=input_list,
-                     previous_response_id=response.id,
-                     extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
-               )
-            print(f"Agent response: {response.output_text}")
+                # Send the tool results back and get the next response
+                response = openai_client.responses.create(
+                    conversation=conversation.id,
+                    input=input_list,
+                    extra_body={"agent_reference": {"name": agent.name, "type": "agent_reference"}},
+                )
+
+            print(f"Agent response: {response.output_text}\n")
            
         # Delete the agent when done
         print("Cleaning up agents:")
