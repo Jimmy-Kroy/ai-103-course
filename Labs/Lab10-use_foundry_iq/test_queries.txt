@@ -1,0 +1,186 @@
+What types of tents does Contoso offer?
+Contoso’s current tent lineup is organized into these main types (with example models in each):  
+
+- **2-Person Backpacking Tents** (lightweight shelters for hiking/backpacking), including **Alpine Explorer 2P** and **TrailMaster Lite 2P**.【6:0†source】  
+- **4-Person Family Tents** (roomier, car-camping friendly designs), including **SummitDome 4P** and the **MegaSpace 4P Cabin** style tent.【6:2†source】  
+- **6-Person Group Tents** (larger-capacity tents for families/groups), including **BaseCamp Pro 6P**.【6:1†source】  
+- **Specialty Tents** (purpose-built for specific conditions/weight goals), including the **FourSeason Alpine 2P** (4-season/mountaineering) and **UltraLite Solo 1P** (minimalist ultralight).【6:1†source】【6:3†source】  
+
+If you tell me how many people you’re camping with and whether it’s backpacking or car camping, I can point you to the best-matching models.
+
+1
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+2
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+3
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+4
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+5
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+Tell me about which backpacks are available in XL.
+These Contoso backpacks are available in **XL** (X-Large), per the **Contoso Outdoor – Backpacks & Hiking Gear Guide 2026**:
+
+## Available in XL
+
+### Weekend backpacks (40–50L)
+- **TrailMaster 45L** (SKU: **PACK-TM-45**) — Sizes: **S, M, L, XL**. The guide lists XL as a **21–23 in torso range** for this model’s sizing chart.【10:0†source】
+- **Alpine Trekker 50L** (SKU: **PACK-AT-50**) — Sizes: **S, M, L, XL** (torso range same as TrailMaster 45L, so XL corresponds to that same X-Large range).【10:1†source】【10:0†source】
+
+### Expedition backpacks (60–75L)
+- **Expedition Pro 65L** (SKU: **PACK-EP-65**) — Sizes: **S, M, L, XL**.【10:3†source】
+- **Summit Master 75L** (SKU: **PACK-SM-75**) — Sizes: **M, L, XL** (no Small listed).【10:2†source】
+
+## Not available in XL (for context)
+- **Explorer Pro 32L** — Sizes: **S/M, M/L** only.【10:0†source】
+- **FastPack Ultra 40L** — Sizes: **S/M, M/L** only.【10:6†source】
+
+If you share your **torso length** (in inches) and whether you’re doing **weekend trips** vs **multi-day/heavy loads**, I can recommend which XL model fits best.
+
+1
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+2
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+3
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+4
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+5
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+6
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+7
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+What camping accessories are available?
+Contoso’s **camping accessories & equipment** lineup (2026 guide) includes:
+
+## Sleeping systems
+- **Sleeping bags:** *Alpine Down -15°F* (SLP-AD-15), *TrailRest 20°F* (SLP-TR-20), *Summer Lite 40°F* (SLP-SL-40).【14:8†source】【14:3†source】
+- **Sleeping pads:** *Alpine Air Pro* inflatable pad (PAD-AAP) and *FoamRest Trail* closed-cell foam pad (PAD-FRT).【14:3†source】
+
+## Camp furniture
+- *TrailChair Pro* (FRN-TC-PRO) lightweight chair【14:1†source】
+- *BaseCamp Comfort Chair* (FRN-BCC) folding chair【14:1†source】
+- *Camp Table Lite* (FRN-CTL) portable table【14:1†source】
+
+## Cooking equipment
+- *Trail Chef Stove System* (COOK-TCS)【14:1†source】
+- *BaseCamp Cookset* (COOK-BCS)【14:6†source】
+- *Fuel Canisters* (COOK-FC-SIZE) in multiple sizes【14:6†source】
+
+## Lighting
+- *HeadLamp Pro 500* (LGT-HLP-500)【14:6†source】
+- *Lantern LED 600* (LGT-LED-600)【14:6†source】【14:2†source】
+
+## Hydration
+- *Water Filter Pro* gravity filter (HYD-WFP)【14:2†source】
+- *Water Bottle Insulated 32oz* (HYD-WB-32)【14:2†source】
+
+## Navigation & safety
+- *GPS Navigator Pro* (NAV-GPS-PRO)【14:2†source】
+- *First Aid Kit – Trail* (SAF-FAK-TRL)【14:4†source】
+- *Emergency Shelter Bivy* (SAF-ESB)【14:4†source】
+
+## Miscellaneous
+- *Trekking Poles – Carbon* (MISC-TP-CARB)【14:4†source】
+- *Portable Solar Panel* 21W (MISC-PSP)【14:4†source】【14:5†source】
+- *Dry Bags Set* (MISC-DB-SET)【14:5†source】
+- *Multi-Tool* (MISC-MT)【14:5†source】
+
+## Tent & backpack accessories (also available)
+- **Tent accessories:** *Universal Footprint Collection*, *Tent Stake Kit – Premium* (ACC-STAKE-PREM), *Gear Loft Organizer* (ACC-LOFT), *Seam Sealer* (ACC-SEAL).【14:0†source】
+- **Backpack accessories:** *Rain Cover Collection* (ACC-RC-SERIES), *Hydration Bladder – 3L* (ACC-HYD-3L), *Pack Liner – Waterproof* (ACC-LINER), *Backpack Repair Kit* (ACC-REPAIR).【14:7†source】
+
+If you tell me whether you’re outfitting for **car camping** or **backpacking**, I can narrow this to the best lightweight vs comfort-focused picks.
+
+1
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+2
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+3
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+4
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+5
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+6
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+7
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+8
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+9
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+10
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+11
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+12
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+13
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+14
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+15
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+16
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+17
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+18
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+19
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+20
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+21
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+22
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-camping-accessories.pdf
+23
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-tents-catalog.pdf
+24
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
+https://1976lab10storageaccount.blob.core.windows.net/contosoproducts/contoso-backpacks-guide.pdf
