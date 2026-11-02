@@ -432,3 +432,4 @@ FodyWeavers.xsd
 /Labs/Lab03-create_generative_ai_chat_app/c#/chat-app/appsettings.json
 /Labs/Lab07-build-ai-agents/python/agent_with_functions/.env
 /Labs/Lab10-use_foundry_iq/python/agent_using_foundy_iq/.env
+/Labs/Lab12-agent_workflows/python/agent-workflow/.env

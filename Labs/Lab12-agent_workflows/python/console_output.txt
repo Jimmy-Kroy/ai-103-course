@@ -1,0 +1,32 @@
+Created conversation (id: conv_07e8080781ffbce800kQ4IPEeaM8UaJSPB4xa3kDTxqR2z8fAc)
+
+Response completed:
+
+================================================================================
+Ticket 1: Technical (100% confidence)
+--------------------------------------------------------------------------------
+Issue: The API returns a 403 error when creating invoices, but our API key hasn't changed.
+
+Response:
+
+
+================================================================================
+Ticket 2: General (100% confidence)
+--------------------------------------------------------------------------------
+Issue: Is there a way to export all invoices as a CSV?
+
+Response:
+
+
+================================================================================
+Ticket 3: Billing (100% confidence)
+--------------------------------------------------------------------------------
+Issue: I was charged twice for the same invoice last Friday and my customer is also seeing two receipts. Can someone fix this?
+
+Response:
+Escalate billing issue to human support team.
+================================================================================
+
+
+Conversation deleted
+Press any key to continue . . .
