@@ -1,0 +1,28 @@
+Here is the expenses data in your file:
+
+date,description,amount
+07-Mar-2025,taxi,24.00
+07-Mar-2025,dinner,65.50
+07-Mar-2025,hotel,125.90
+
+
+What would you like me to do with it?
+
+Submit an expense claim
+
+To: expenses@contoso.com
+Subject: Expense Claim
+Expense Claim Submission:
+
+Date: 07-Mar-2025
+
+Itemized Expenses:
+- Taxi: $24.00
+- Dinner: $65.50
+- Hotel: $125.90
+
+Total: $215.40
+
+
+# Agent:
+Your expense claim has been submitted to expenses@contoso.com with the itemized expenses and a total. If you need a copy of the details or further assistance, please let me know!
