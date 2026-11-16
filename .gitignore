@@ -433,3 +433,4 @@ FodyWeavers.xsd
 /Labs/Lab07-build-ai-agents/python/agent_with_functions/.env
 /Labs/Lab10-use_foundry_iq/python/agent_using_foundy_iq/.env
 /Labs/Lab12-agent_workflows/python/agent-workflow/.env
+/Labs/Lab16-a2a_protocol/python/a2a_demo/.env

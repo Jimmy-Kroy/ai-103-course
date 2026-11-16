@@ -1,0 +1,20 @@
+Starting TitleAgent...
+TitleAgent is ready on port 10007
+Starting OutlineAgent...
+OutlineAgent is ready on port 10008
+Discovered remote agent: TitleAgent - Generates a catchy blog post title for a given topic.
+Discovered remote agent: OutlineAgent - Writes a short outline (4-6 sections) for a blog post title or topic.
+
+Enter a prompt for the routing agent. Type 'quit' to exit.
+User: Create a title and outline for an article about React programming.
+Agent: **Title:**
+React Made Simple: Building Dynamic UIs with Confidence
+
+**Outline:**
+1. Why React simplifies modern user interface development
+2. Understanding components, props, and state basics
+3. Creating dynamic interfaces with reusable components
+4. Managing user interactions and updating the UI
+5. Building confidently with React best practices
+
+User:

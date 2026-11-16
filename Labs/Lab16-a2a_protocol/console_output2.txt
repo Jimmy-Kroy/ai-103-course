@@ -1,0 +1,18 @@
+Starting TitleAgent...
+TitleAgent is ready on port 10007
+Starting OutlineAgent...
+OutlineAgent is ready on port 10008
+Discovered remote agent: TitleAgent - Generates a catchy blog post title for a given topic.
+Discovered remote agent: OutlineAgent - Writes a short outline (4-6 sections) for a blog post title or topic.
+
+Enter a prompt for the routing agent. Type 'quit' to exit.
+User: Create a title and outline for an article about the chances that the government of the Netherlands collapse?
+Agent: **Title:**
+Will the Dutch Government Fall? Assessing the Odds of a Netherlands Collapse
+
+**Outline:**
+1. Why Dutch governments collapse more often
+2. Current coalition tensions and political flashpoints
+3. Key parties, leaders, and competing interests
+4. Scenarios that could trigger government collapse
+5. Likelihood, timing, and what happens next
