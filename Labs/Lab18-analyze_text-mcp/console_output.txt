@@ -1,0 +1,863 @@
+What can you help me with?
+
+
+I can help you with a wide range of text analysis tasks! Some examples include:
+
+1. **Summarizing text**  
+   Condense articles, essays, or emails into concise summaries.
+
+2. **Grammar and style checking**  
+   Identify errors or suggest improvements for clarity, coherence, and tone.
+
+3. **Paraphrasing and rewriting**  
+   Restate text for simplicity, originality, or different target audiences.
+
+4. **Keyword extraction**  
+   Identify the most important words or themes in a document.
+
+5. **Sentiment analysis**  
+   Find out whether a piece of text is positive, negative, or neutral.
+
+6. **Text comparison**  
+   Check for similarities or differences between two pieces of text.
+
+7. **Translation**  
+   Translate between languages (with limitations).
+
+8. **Proofreading**  
+   Copy-edit and fix mistakes in spelling, punctuation, and grammar.
+
+9. **Analyze intent**  
+   Determine the main purpose or message of the text.
+
+10. **Answering questions**  
+   Help answer questions based on the content you provide.
+
+11. **Formatting**  
+   Help with structuring text for emails, essays, resumes, etc.
+
+12. **Citation and references**  
+   Assist in generating and organizing citations for academic work.
+
+If you have a specific task or text, just let me know how I can assist!
+
+---------------------------------------------------------------------------------------------------
+
+Identify the PII entities in this article, and generate a redacted version:
+
+Microsoft was founded on April 4, 1975, by childhood friends Bill Gates (then 19) and Paul Allen (22) after they were inspired by the Altair 8800, one of the first personal computers, featured on the cover of Popular Electronics. They contacted the Altair’s maker, MITS, and successfully developed a version of the BASIC programming language, despite initially not owning the machine themselves. The pair formed a partnership called “Micro‑Soft” in Albuquerque, New Mexico, close to MITS’s headquarters, with the goal of writing software for emerging microcomputers.
+
+In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
+
+PII Entities Identified
+The following are the potentially sensitive entities found in the article:
+
+People: Bill Gates, Paul Allen, Gates, Allen
+Organizations: Microsoft, Popular Electronics, MITS, IBM
+Dates: April 4, 1975, 1970s, 1979, 1980
+Locations: Albuquerque, New Mexico, Seattle, headquarters
+
+Redacted Version
+Microsoft was founded on [REDACTED: Date], by childhood friends [REDACTED: Person] (then 19) and [REDACTED: Person] (22) after they were inspired by the Altair 8800, one of the first personal computers, featured on the cover of [REDACTED: Organization]. They contacted the Altair’s maker, [REDACTED: Organization], and successfully developed a version of the BASIC programming language, despite initially not owning the machine themselves. The pair formed a partnership called “Micro‑Soft” in [REDACTED: City], [REDACTED: State], close to [REDACTED: Organization]’s [REDACTED: Location], with the goal of writing software for emerging microcomputers.
+
+In the late [REDACTED: DateRange], [REDACTED: Organization] grew by supplying programming languages to multiple hardware vendors, then relocated to the [REDACTED: City] area in [REDACTED: DateRange]. A pivotal moment came in [REDACTED: DateRange] when [REDACTED: Organization] partnered with [REDACTED: Organization] to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. [REDACTED: Person] guided the company’s long-term strategy as CEO, while [REDACTED: Person] contributed key technical vision in its early years, setting [REDACTED: Organization] on a path that would reshape the software industry.
+
+
+Input:
+{
+  "server_label": "Text-analysis-tools",
+  "operation": "MyTextAnalysisTools___extract_named_entities_from_text",
+  "arguments": {
+    "message": "Microsoft was founded on April 4, 1975, by childhood friends Bill Gates (then 19) and Paul Allen (22) after they were inspired by the Altair 8800, one of the first personal computers, featured on the cover of Popular Electronics. They contacted the Altair’s maker, MITS, and successfully developed a version of the BASIC programming language, despite initially not owning the machine themselves. The pair formed a partnership called “Micro‑Soft” in Albuquerque, New Mexico, close to MITS’s headquarters, with the goal of writing software for emerging microcomputers.\n\nIn the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.",
+    "inclusionList": [
+      "Person",
+      "DateTime",
+      "Location",
+      "Organization"
+    ],
+    "exclusionList": [],
+    "overlapPolicy": "MatchLongest",
+    "language": "en",
+    "modelVersion": "latest"
+  },
+  "id": "mcp_06b13d375fe5f14d006aff06e18ce081909be42b41fb0b3a48",
+  "type": "mcp_call"
+}
+
+Output:
+{
+  "content": {
+    "type": "text",
+    "text": "[{\"id\":\"1\",\"warnings\":[],\"entities\":[{\"text\":\"Microsoft\",\"category\":\"Organization\",\"length\":9,\"confidenceScore\":0.98,\"type\":\"Organization\",\"tags\":[{\"name\":\"Organization\",\"confidenceScore\":0.98}]},{\"text\":\"April 4, 1975\",\"category\":\"DateTime\",\"subcategory\":\"Date\",\"offset\":25,\"length\":13,\"confidenceScore\":0.8,\"type\":\"Date\",\"tags\":[{\"name\":\"Date\",\"confidenceScore\":0.8},{\"name\":\"DateTime\",\"confidenceScore\":0.8}],\"metadata\":{\"dates\":[{\"timex\":\"1975-04-04\",\"value\":\"1975-04-04\"}]}},{\"text\":\"Bill Gates\",\"category\":\"Person\",\"offset\":61,\"length\":10,\"confidenceScore\":1.0,\"type\":\"Person\",\"tags\":[{\"name\":\"Person\",\"confidenceScore\":1.0}]},{\"text\":\"Paul Allen\",\"category\":\"Person\",\"offset\":86,\"length\":10,\"confidenceScore\":1.0,\"type\":\"Person\",\"tags\":[{\"name\":\"Person\",\"confidenceScore\":1.0}]},{\"text\":\"Popular Electronics\",\"category\":\"Organization\",\"offset\":209,\"length\":19,\"confidenceScore\":0.78,\"type\":\"Organization\",\"tags\":[{\"name\":\"Organization\",\"confidenceScore\":0.78}]},{\"text\":\"MITS\",\"category\":\"Organization\",\"offset\":265,\"length\":4,\"confidenceScore\":0.97,\"type\":\"Organization\",\"tags\":[{\"name\":\"Organization\",\"confidenceScore\":0.97}]},{\"text\":\"Albuquerque\",\"category\":\"Location\",\"subcategory\":\"City\",\"offset\":449,\"length\":11,\"confidenceScore\":1.0,\"type\":\"City\",\"tags\":[{\"name\":\"City\",\"confidenceScore\":1.0},{\"name\":\"GPE\",\"confidenceScore\":1.0},{\"name\":\"Location\",\"confidenceScore\":1.0}]},{\"text\":\"New Mexico\",\"category\":\"Location\",\"subcategory\":\"State\",\"offset\":462,\"length\":10,\"confidenceScore\":0.76,\"type\":\"State\",\"tags\":[{\"name\":\"State\",\"confidenceScore\":0.76},{\"name\":\"GPE\",\"confidenceScore\":0.76},{\"name\":\"Location\",\"confidenceScore\":0.76}]},{\"text\":\"MITS\",\"category\":\"Organization\",\"offset\":483,\"length\":4,\"confidenceScore\":0.98,\"type\":\"Organization\",\"tags\":[{\"name\":\"Organization\",\"confidenceScore\":0.98}]},{\"text\":\"headquarters\",\"category\":\"Location\",\"subcategory\":\"Structural\",\"offset\":490,\"length\":12,\"confidenceScore\":0.77,\"type\":\"Structural\",\"tags\":[{\"name\":\"Structural\",\"confidenceScore\":0.77},{\"name\":\"Location\",\"confidenceScore\":0.77}]},{\"text\":\"1970s\",\"category\":\"DateTime\",\"subcategory\":\"DateRange\",\"offset\":580,\"length\":5,\"confidenceScore\":0.8,\"type\":\"DateRange\",\"tags\":[{\"name\":\"DateRange\",\"confidenceScore\":0.8},{\"name\":\"DateTime\",\"confidenceScore\":0.8}],\"metadata\":{\"spanValues\":[{\"begin\":\"1970-01-01\",\"end\":\"1980-01-01\",\"duration\":\"P10Y\",\"timex\":\"(1970-01-01,1980-01-01,P10Y)\"}]}},{\"text\":\"Microsoft\",\"category\":\"Organization\",\"offset\":587,\"length\":9,\"confidenceScore\":0.99,\"type\":\"Organization\",\"tags\":[{\"name\":\"Organization\",\"confidenceScore\":0.99}]},{\"text\":\"Seattle\",\"category\":\"Location\",\"subcategory\":\"City\",\"offset\":689,\"length\":7,\"confidenceScore\":1.0,\"type\":\"City\",\"tags\":[{\"name\":\"City\",\"confidenceScore\":1.0},{\"name\":\"GPE\",\"confidenceScore\":1.0},{\"name\":\"Location\",\"confidenceScore\":1.0}]},{\"text\":\"1979\",\"category\":\"DateTime\",\"subcategory\":\"DateRange\",\"offset\":705,\"length\":4,\"confidenceScore\":0.8,\"type\":\"DateRange\",\"tags\":[{\"name\":\"DateRange\",\"confidenceScore\":0.8},{\"name\":\"DateTime\",\"confidenceScore\":0.8}],\"metadata\":{\"spanValues\":[{\"begin\":\"1979-01-01\",\"end\":\"1980-01-01\",\"timex\":\"1979\"}]}},{\"text\":\"1980\",\"category\":\"DateTime\",\"subcategory\":\"DateRange\",\"offset\":736,\"length\":4,\"confidenceScore\":0.8,\"type\":\"DateRange\",\"tags\":[{\"name\":\"DateRange\",\"confidenceScore\":0.8},{\"name\":\"DateTime\",\"confidenceScore\":0.8}],\"metadata\":{\"spanValues\":[{\"begin\":\"1980-01-01\",\"end\":\"1981-01-01\",\"timex\":\"1980\"}]}},{\"text\":\"Microsoft\",\"category\":\"Organization\",\"offset\":746,\"length\":9,\"confidenceScore\":0.99,\"type\":\"Organization\",\"tags\":[{\"name\":\"Organization\",\"confidenceScore\":0.99}]},{\"text\":\"IBM\",\"category\":\"Organization\",\"offset\":771,\"length\":3,\"confidenceScore\":1.0,\"type\":\"Organization\",\"tags\":[{\"name\":\"Organization\",\"confidenceScore\":1.0}]},{\"text\":\"Gates\",\"category\":\"Person\",\"offset\":904,\"length\":5,\"confidenceScore\":1.0,\"type\":\"Person\",\"tags\":[{\"name\":\"Person\",\"confidenceScore\":1.0}]},{\"text\":\"Allen\",\"category\":\"Person\",\"offset\":964,\"length\":5,\"confidenceScore\":1.0,\"type\":\"Person\",\"tags\":[{\"name\":\"Person\",\"confidenceScore\":1.0}]},{\"text\":\"Microsoft\",\"category\":\"Organization\",\"offset\":1031,\"length\":9,\"confidenceScore\":0.98,\"type\":\"Organization\",\"tags\":[{\"name\":\"Organization\",\"confidenceScore\":0.98}]}]}]"
+  }
+}
+
+Use * as a mask
+
+Understood! When I perform any redaction, I will use * as the mask character. If you have a text to redact (remove PII or sensitive info), please provide it and specify what types of information you would like to mask.
+
+Identify the PII entities in this article, and generate a redacted version:
+
+Microsoft was founded on April 4, 1975, by childhood friends Bill Gates (then 19) and Paul Allen (22) after they were inspired by the Altair 8800, one of the first personal computers, featured on the cover of Popular Electronics. They contacted the Altair’s maker, MITS, and successfully developed a version of the BASIC programming language, despite initially not owning the machine themselves. The pair formed a partnership called “Micro‑Soft” in Albuquerque, New Mexico, close to MITS’s headquarters, with the goal of writing software for emerging microcomputers.
+
+In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the Seattle area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. Gates guided the company’s long-term strategy as CEO, while Allen contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
+
+
+**Identified PII Entities:**
+- Dates: April 4, 1975
+- Persons: Bill Gates, Paul Allen, Gates, Allen
+- Locations: Albuquerque, New Mexico, headquarters, Seattle
+
+---
+
+**Redacted Version (using * for masking):**
+
+Microsoft was founded on ************, by childhood friends ********* (then 19) and ********** (22) after they were inspired by the Altair 8800, one of the first personal computers, featured on the cover of Popular Electronics. They contacted the Altair’s maker, MITS, and successfully developed a version of the BASIC programming language, despite initially not owning the machine themselves. The pair formed a partnership called “Micro‑Soft” in *************, ***********, close to MITS’s *************, with the goal of writing software for emerging microcomputers.
+
+In the late 1970s, Microsoft grew by supplying programming languages to multiple hardware vendors, then relocated to the ******** area in 1979. A pivotal moment came in 1980 when Microsoft partnered with IBM to provide an operating system for the IBM PC, leading to MS‑DOS and establishing the company’s dominance in personal computing. ***** guided the company’s long-term strategy as CEO, while ***** contributed key technical vision in its early years, setting Microsoft on a path that would reshape the software industry.
+
+---
+
+If you want further customization (e.g., masking only certain types of entities), let me know!
+
+---------------------------------------------------------------------------------------------------
+
+User prompt: Extract named entities from the following text: "Pierre and I went to Paris on July 14th."
+Text-analyzer-agent: Here are the named entities extracted from the text:
+
+1. Pierre — Person
+2. Paris — Location (City)
+3. July 14th — Date (with possible calendar values: July 14, 2026 and July 14, 2027)
+
+Let me know if you want more details or additional analysis!
+Press any key to continue . . .
+
+
+---------------------------------------------------------------------------------------------------
+User prompt: Tell me what entities and dates are mentioned in this review, and whether it is positive or negative: "I booked my flight to Paris in July with Margie's Travel, and it was fantastic!"
+Text-analyzer-agent:
+
+Response Details: {
+  "id": "resp_0757c24cc6a5866c006aff0ed3a26081938eb34e6e07e2e85f",
+  "created_at": 1795100371.0,
+  "error": null,
+  "incomplete_details": null,
+  "instructions": "You are an AI agent that assists users by helping them analyze text. Use the Azure Language tool to perform text analysis tasks.",
+  "metadata": {},
+  "model": "gpt-4.1",
+  "object": "response",
+  "output": [
+    {
+      "id": "mcpl_0757c24cc6a5866c006aff0ed3b7cc8193bfcd81bd04e3c427",
+      "server_label": "Text-analysis-tools",
+      "tools": [
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "The text that needs to be used for analysis",
+                "properties": {},
+                "required": []
+              },
+              "project": {
+                "type": "string",
+                "description": "The name of the project to use for analysis",
+                "properties": {},
+                "required": []
+              },
+              "deployment": {
+                "type": "string",
+                "description": "The name of the deployment to use for analysis",
+                "properties": {},
+                "required": []
+              }
+            },
+            "required": [
+              "message",
+              "project",
+              "deployment"
+            ]
+          },
+          "name": "MyTextAnalysisTools___detect_intent",
+          "annotations": {},
+          "description": "This tool detects intents and entities in conversations. This tool requires the conversation message to analyze, the project name and the deployment name. Results are returned as a JSON representation containing the top intent and entities. Return the response as is and don't add additional entities."
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "The text that needs to be used for analysis",
+                "properties": {},
+                "required": []
+              },
+              "modelVersion": {
+                "type": "string",
+                "description": "(Optional) Model version to be used.",
+                "properties": {},
+                "default": "latest",
+                "required": []
+              },
+              "countryHint": {
+                "type": "string",
+                "description": "(Optional) Country hint represented as ISO 3166-1 alpha-2 two-letter country code",
+                "properties": {},
+                "default": null,
+                "required": []
+              }
+            },
+            "required": [
+              "message"
+            ]
+          },
+          "name": "MyTextAnalysisTools___detect_language_from_text",
+          "annotations": {},
+          "description": "This tool detects and returns language detected. The input is the message for which we want to detect the language.It also accepts an optional model version and country hint. The result is a json response containing the detected language."
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "The text that needs to be used for analysis",
+                "properties": {},
+                "required": []
+              },
+              "opinionMining": {
+                "type": "boolean",
+                "description": "(Optional) Whether to include opinion mining in the analysis. Default set to true.",
+                "properties": {},
+                "default": true,
+                "required": []
+              },
+              "modelVersion": {
+                "type": "string",
+                "description": "(Optional) Model version to be used.",
+                "properties": {},
+                "default": "latest",
+                "required": []
+              },
+              "language": {
+                "type": "string",
+                "description": "(Optional) The language of the input text.  The language requested should be according to the 2 letter ISO 639-1 standard.",
+                "properties": {},
+                "default": "en",
+                "required": []
+              }
+            },
+            "required": [
+              "message"
+            ]
+          },
+          "name": "MyTextAnalysisTools___detect_sentiment_from_text",
+          "annotations": {},
+          "description": "This tool detects the sentiment from the input text.It also accepts an optional model version and country hint. The result is a json response containing the detected sentiment."
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "(Required) The text that needs to be used for analysis",
+                "properties": {},
+                "required": []
+              },
+              "healthcareDocumentTypeStr": {
+                "type": "string",
+                "description": "(Optional) The healthcare document type to be used. The allowed values are string representation of the enum HealthcareDocumentTypeEnum. Default to None if not provided.",
+                "properties": {},
+                "default": "None",
+                "required": []
+              },
+              "language": {
+                "type": "string",
+                "description": "(Optional) The language of the input text. The language requested should be according to the 2 letter ISO 639-1 standard.",
+                "properties": {},
+                "default": "en",
+                "required": []
+              },
+              "fhirVersion": {
+                "type": "string",
+                "description": "(Optional) The Fast Healthcare Interoperability Resources (FHIR) version. Default is set to 4.0.1",
+                "properties": {},
+                "default": "4.0.1",
+                "required": []
+              },
+              "modelVersion": {
+                "type": "string",
+                "description": "(Optional) Model version to be used.",
+                "properties": {},
+                "default": "latest",
+                "required": []
+              }
+            },
+            "required": [
+              "message"
+            ]
+          },
+          "name": "MyTextAnalysisTools___extract_healthcare_entities_from_text",
+          "annotations": {},
+          "description": "This tool extracts healthcare entities from the text input and returns an array of entities.It requires the message to extract entities from. It also accepts optional parameters like document types, fhir version. Results are returned as a JSON array of entities. Return the response as is and don't add additional entities."
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "The text that needs to be used for analysis",
+                "properties": {},
+                "required": []
+              },
+              "modelVersion": {
+                "type": "string",
+                "description": "(Optional) Model version to be used.",
+                "properties": {},
+                "default": "latest",
+                "required": []
+              },
+              "language": {
+                "type": "string",
+                "description": "(Optional) The language of the input text.  The language requested should be according to the 2 letter ISO 639-1 standard.",
+                "properties": {},
+                "default": "en",
+                "required": []
+              }
+            },
+            "required": [
+              "message"
+            ]
+          },
+          "name": "MyTextAnalysisTools___extract_key_phrases_from_text",
+          "annotations": {},
+          "description": "This tool extracts key phrases from the input text.It also accepts an optional model version and language. The result is a json response containing the extracted key phrases."
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "The text that needs to be used for analysis",
+                "properties": {},
+                "required": []
+              },
+              "inclusionList": {
+                "type": "array",
+                "description": "(Optional) The list of type of entities to be included in the response. The allowed values are string representations of the enum NerTypeEnum. Default is an empty list. Make sure you map the values to the types in the enum as incorrect mappings will cause the system to throw an error.",
+                "properties": {},
+                "default": null,
+                "required": [],
+                "items": {
+                  "type": "string",
+                  "properties": {},
+                  "required": []
+                }
+              },
+              "exclusionList": {
+                "type": "array",
+                "description": "(Optional) The list of entity types to be excluded. The types allowed are string representations of the enum NerTypeEnum. Default is empty list.",
+                "properties": {},
+                "default": null,
+                "required": [],
+                "items": {
+                  "type": "string",
+                  "properties": {},
+                  "required": []
+                }
+              },
+              "overlapPolicy": {
+                "type": "string",
+                "description": "(Optional) Entity overlap policy allowed values: AllowOverlap, MatchLongest(default)",
+                "properties": {},
+                "default": null,
+                "required": []
+              },
+              "language": {
+                "type": "string",
+                "description": "(Optional) The language of the input text. The language requested should be according to the 2 letter ISO 639-1 standard.",
+                "properties": {},
+                "default": "en",
+                "required": []
+              },
+              "modelVersion": {
+                "type": "string",
+                "description": "(Optional) Model version to be used.",
+                "properties": {},
+                "default": "latest",
+                "required": []
+              }
+            },
+            "required": [
+              "message"
+            ]
+          },
+          "name": "MyTextAnalysisTools___extract_named_entities_from_text",
+          "annotations": {},
+          "description": "This tool extracts entities from the text input and returns an array of entities.It requires the message but can accept optional parameters like - entity types to be includes, - entity types to be excluded, - entity overlap policy to be used. Results are returned as a JSON array of entities. Return the response as is and don't add additional entities."
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string",
+                "description": "Query string against the knowledge base.",
+                "properties": {},
+                "required": []
+              },
+              "project": {
+                "type": "string",
+                "description": "The name of the project to use for querying",
+                "properties": {},
+                "required": []
+              },
+              "deployment": {
+                "type": "string",
+                "description": "The name of the deployment to use for querying. Default to 'production'",
+                "properties": {},
+                "default": "production",
+                "required": []
+              },
+              "top": {
+                "type": "integer",
+                "description": "(Optional) Max number of answers to be returned for the question. Default to 3",
+                "properties": {},
+                "default": 3,
+                "required": []
+              },
+              "confidenceScoreThreshold": {
+                "type": "number",
+                "description": "(Optional) Minimum threshold confidence score for answers, value ranges from 0 to 1. Default value is 0.7",
+                "properties": {},
+                "default": 0.7,
+                "required": []
+              },
+              "questionOnly": {
+                "type": "boolean",
+                "description": "(Optional) Answer based on the question only, default false",
+                "properties": {},
+                "default": false,
+                "required": []
+              },
+              "includeUnstructuredSources": {
+                "type": [
+                  "boolean",
+                  "null"
+                ],
+                "description": "(Optional) Flag to enable query over unstructured sources, default true",
+                "properties": {},
+                "default": true,
+                "required": []
+              }
+            },
+            "required": [
+              "question",
+              "project"
+            ]
+          },
+          "name": "MyTextAnalysisTools___get_answers_from_knowledge_base",
+          "annotations": {},
+          "description": "This tool answers questions using the configured knowledge bases.\nIt requires the following inputs: the question text, the target project, and the deployment name (either test or production).\nOptional parameters include the maximum number of answers to return, the minimum confidence score threshold, the ranker type, and a boolean flag indicating whether unstructured data sources should be queried.\nResults are returned as a JSON array of answer objects, each containing the answer text, its confidence score, an array of alternative questions considered, and the source of the answer."
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string",
+                "description": "Query string against the knowledge base.",
+                "properties": {},
+                "required": []
+              },
+              "textDocuments": {
+                "type": "array",
+                "description": "A collection of text documents to query against.",
+                "properties": {},
+                "required": [],
+                "items": {
+                  "type": "string",
+                  "properties": {},
+                  "required": []
+                }
+              },
+              "language": {
+                "type": "string",
+                "description": "(Optional)The language of the text documents. This is the BCP-47: https://tools.ietf.org/rfc/bcp/bcp47.txt representation of a language. See https://docs.microsoft.com/azure/cognitive-services/qnamaker/overview/language-support for list of currently supported languages. Default 'en' for English",
+                "properties": {},
+                "default": "en",
+                "required": []
+              }
+            },
+            "required": [
+              "question",
+              "textDocuments"
+            ]
+          },
+          "name": "MyTextAnalysisTools___get_answers_from_text",
+          "annotations": {},
+          "description": "This tool answers questions using the list of input text provided in the request.\nIt requires the question text and a collection of text documents (as string values) to be queried.\nOptionally, it accepts the language of the text documents in BCP-47 format (for example, en for English or es for Spanish).\nResults are returned as a JSON array of answer objects, each containing the answer text, its confidence score, the sentence offset from the start of the document, the sentence length, and the index position of the document in the input list."
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "sourceDocument": {
+                "type": "string",
+                "description": "The Uri of the storage blob to be redacted.",
+                "properties": {},
+                "required": []
+              },
+              "targetContainer": {
+                "type": "string",
+                "description": "The Uri of the storage container where the redacted document and results will be stored",
+                "properties": {},
+                "required": []
+              },
+              "piiCategories": {
+                "type": "array",
+                "description": "(Optional) The list of PII Categories to be redacted. The PII Categories allowed are string representations of the enum PiiCategoryEnum. Default is an empty list",
+                "properties": {},
+                "default": null,
+                "required": [],
+                "items": {
+                  "type": "string",
+                  "properties": {},
+                  "required": []
+                }
+              },
+              "excludePiiCategories": {
+                "type": "array",
+                "description": "(Optional) The list of Pii categories to be excluded from redaction. The PII Categories allowed are string representations of the enum PiiCategoryEnum. Default is empty list.",
+                "properties": {},
+                "default": null,
+                "required": [],
+                "items": {
+                  "type": "string",
+                  "properties": {},
+                  "required": []
+                }
+              },
+              "redactionPolicy": {
+                "type": "string",
+                "description": "(Optional) PII redaction policy. Allowed values are EntityMask, CharacterMask and NoMask",
+                "properties": {},
+                "default": "CharacterMask",
+                "required": []
+              },
+              "redactionCharacter": {
+                "type": "string",
+                "description": "(Optional) Redaction character to be used to mask the PII. Default is *. Other supported characters are $,!,#,%,&,+,-,=,?,@,^,-,~",
+                "properties": {},
+                "default": "*",
+                "required": []
+              },
+              "language": {
+                "type": "string",
+                "description": "(Optional) The language of the input text.  The language requested should be according to the 2 letter ISO 639-1 standard.",
+                "properties": {},
+                "default": "en",
+                "required": []
+              },
+              "modelVersion": {
+                "type": "string",
+                "description": "(Optional) Model version to be used.",
+                "properties": {},
+                "default": "latest",
+                "required": []
+              }
+            },
+            "required": [
+              "sourceDocument",
+              "targetContainer"
+            ]
+          },
+          "name": "MyTextAnalysisTools___redact_pii_from_document",
+          "annotations": {},
+          "description": "This tool detects PII from word and PDF documents in Azure Storage blobs and redacts it to remove PII. It requires the source and destination urls but can accept optional parameters like entity types to be redacted, entity types to be excluded, redaction policy to be used. Results are returned as a JSON array of documents containing the location of the redacted documents."
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "The text that needs to be redated",
+                "properties": {},
+                "required": []
+              },
+              "piiCategories": {
+                "type": "array",
+                "description": "(Optional) The list of Pii Categories to be redacted. The PII Categories allowed are string representations of the enum PiiCategoryEnum. Default is an empty list",
+                "properties": {},
+                "default": null,
+                "required": [],
+                "items": {
+                  "type": "string",
+                  "properties": {},
+                  "required": []
+                }
+              },
+              "excludePiiCategories": {
+                "type": "array",
+                "description": "(Optional) The list of Pii categories to be excluded from redaction. The PII Categories allowed are string representations of the enum PiiCategoryEnum. Default is empty list.",
+                "properties": {},
+                "default": null,
+                "required": [],
+                "items": {
+                  "type": "string",
+                  "properties": {},
+                  "required": []
+                }
+              },
+              "redactionPolicy": {
+                "type": "string",
+                "description": "(Optional) PII redaction policy kind which is the string implementation of the RedactionPolicyEnum.",
+                "properties": {},
+                "default": null,
+                "required": []
+              },
+              "redactionCharacter": {
+                "type": "string",
+                "description": "(Optional) Redaction character to be used to mask the PII. Default is *. Other supported characters are $,!,#,%,&,+,-,=,?,@,^,-,~",
+                "properties": {},
+                "default": "*",
+                "required": []
+              },
+              "language": {
+                "type": "string",
+                "description": "(Optional) The language of the input text. The language requested should be according to the 2 letter ISO 639-1 standard.",
+                "properties": {},
+                "default": "en",
+                "required": []
+              },
+              "modelVersion": {
+                "type": "string",
+                "description": "(Optional) Model version to be used.",
+                "properties": {},
+                "default": "latest",
+                "required": []
+              }
+            },
+            "required": [
+              "message"
+            ]
+          },
+          "name": "MyTextAnalysisTools___redact_pii_from_text",
+          "annotations": {},
+          "description": "This tool detects PII from the text input and redacts it to remove PII and returns it. It requires the message but can accept optional parameters like entity types to be redacted, entity types to be excluded, redaction policy to be used. Results are returned as a JSON array of documents"
+        },
+        {
+          "input_schema": {
+            "type": "object",
+            "properties": {
+              "message": {
+                "type": "string",
+                "description": "The text that needs to be used for summarization",
+                "properties": {},
+                "required": []
+              },
+              "modelVersion": {
+                "type": "string",
+                "description": "(Optional) Model version to be used.",
+                "properties": {},
+                "default": "latest",
+                "required": []
+              },
+              "language": {
+                "type": "string",
+                "description": "(Optional) The language of the input text.  The language requested should be according to the 2 letter ISO 639-1 standard.",
+                "properties": {},
+                "default": "en",
+                "required": []
+              },
+              "summarizationType": {
+                "type": "string",
+                "description": "(Optional) The type of summarization - extractive of abstractive. Default is abstractive.",
+                "properties": {},
+                "default": "abstractive",
+                "required": []
+              },
+              "summaryLengthBucket": {
+                "type": "string",
+                "description": "(Optional) The length of the summary - short, medium, or long. Default is medium.",
+                "properties": {},
+                "default": "medium",
+                "required": []
+              },
+              "sentenceCount": {
+                "type": [
+                  "integer",
+                  "null"
+                ],
+                "description": "(Optional) The number of sentences to include in the summary. Default is null (no limit).",
+                "properties": {},
+                "default": null,
+                "required": []
+              }
+            },
+            "required": [
+              "message"
+            ]
+          },
+          "name": "MyTextAnalysisTools___summarize_text",
+          "annotations": {},
+          "description": "This tool generates a summary for any text and returns it. It requires the message to be summarized, and optionally accepts parameters like model version, language, summarization type, summary length bucket, and sentence count.Results are returned as a JSON array of documents containing the summary."
+        }
+      ],
+      "type": "mcp_list_tools",
+      "error": null,
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "Text-analyzer-agent",
+        "version": "12"
+      },
+      "response_id": "resp_0757c24cc6a5866c006aff0ed3a26081938eb34e6e07e2e85f"
+    },
+    {
+      "id": "mcp_0757c24cc6a5866c006aff0ed4554881939d5bf653589b89ef",
+      "arguments": "{\"message\":\"I booked my flight to Paris in July with Margie's Travel, and it was fantastic!\",\"inclusionList\":[\"Person\",\"Organization\",\"Location\",\"DateTime\"],\"exclusionList\":[],\"overlapPolicy\":\"AllowOverlap\",\"language\":\"en\",\"modelVersion\":\"latest\"}",
+      "name": "MyTextAnalysisTools___extract_named_entities_from_text",
+      "server_label": "Text-analysis-tools",
+      "type": "mcp_call",
+      "approval_request_id": null,
+      "error": null,
+      "output": "{\"content\":{\"type\":\"text\",\"text\":\"[{\\\"id\\\":\\\"1\\\",\\\"warnings\\\":[],\\\"entities\\\":[{\\\"text\\\":\\\"Paris\\\",\\\"category\\\":\\\"Location\\\",\\\"subcategory\\\":\\\"City\\\",\\\"offset\\\":22,\\\"length\\\":5,\\\"confidenceScore\\\":1.0,\\\"type\\\":\\\"City\\\",\\\"tags\\\":[{\\\"name\\\":\\\"City\\\",\\\"confidenceScore\\\":1.0},{\\\"name\\\":\\\"GPE\\\",\\\"confidenceScore\\\":1.0},{\\\"name\\\":\\\"Location\\\",\\\"confidenceScore\\\":1.0}]},{\\\"text\\\":\\\"July\\\",\\\"category\\\":\\\"DateTime\\\",\\\"subcategory\\\":\\\"DateRange\\\",\\\"offset\\\":31,\\\"length\\\":4,\\\"confidenceScore\\\":0.8,\\\"type\\\":\\\"DateRange\\\",\\\"tags\\\":[{\\\"name\\\":\\\"DateRange\\\",\\\"confidenceScore\\\":0.8},{\\\"name\\\":\\\"DateTime\\\",\\\"confidenceScore\\\":0.8}],\\\"metadata\\\":{\\\"spanValues\\\":[{\\\"begin\\\":\\\"2026-07-01\\\",\\\"end\\\":\\\"2026-08-01\\\",\\\"timex\\\":\\\"XXXX-07\\\"},{\\\"begin\\\":\\\"2027-07-01\\\",\\\"end\\\":\\\"2027-08-01\\\",\\\"timex\\\":\\\"XXXX-07\\\"}]}},{\\\"text\\\":\\\"Margie's Travel\\\",\\\"category\\\":\\\"Organization\\\",\\\"offset\\\":41,\\\"length\\\":15,\\\"confidenceScore\\\":1.0,\\\"type\\\":\\\"Organization\\\",\\\"tags\\\":[{\\\"name\\\":\\\"Organization\\\",\\\"confidenceScore\\\":1.0}]}]}]\"}}\n",
+      "status": "completed",
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "Text-analyzer-agent",
+        "version": "12"
+      },
+      "response_id": "resp_0757c24cc6a5866c006aff0ed3a26081938eb34e6e07e2e85f"
+    },
+    {
+      "id": "mcpr_0757c24cc6a5866c006aff0ed574ac8193bbb90c81e8a1fbcc",
+      "arguments": "{\"message\":\"I booked my flight to Paris in July with Margie's Travel, and it was fantastic!\",\"opinionMining\":true,\"modelVersion\":\"latest\",\"language\":\"en\"}",
+      "name": "MyTextAnalysisTools___detect_sentiment_from_text",
+      "server_label": "Text-analysis-tools",
+      "type": "mcp_approval_request",
+      "agent_reference": {
+        "type": "agent_reference",
+        "name": "Text-analyzer-agent",
+        "version": "12"
+      },
+      "response_id": "resp_0757c24cc6a5866c006aff0ed3a26081938eb34e6e07e2e85f"
+    }
+  ],
+  "parallel_tool_calls": true,
+  "temperature": 1.0,
+  "tool_choice": "auto",
+  "tools": [
+    {
+      "server_label": "Text-analysis-tools",
+      "type": "mcp",
+      "allowed_callers": null,
+      "allowed_tools": null,
+      "authorization": null,
+      "connector_id": null,
+      "defer_loading": null,
+      "headers": null,
+      "require_approval": {
+        "always": null,
+        "never": {
+          "read_only": null,
+          "tool_names": [
+            "MyTextAnalysisTools___extract_named_entities_from_text",
+            "MyTextAnalysisTools___redact_pii_from_text"
+          ]
+        }
+      },
+      "server_description": null,
+      "server_url": "https://mk-textanalysis-lab-resource.services.ai.azure.com/api/projects/mk-textanalysis-lab/toolboxes/Text-analysis-tools/versions/2/mcp?api-version=v1",
+      "tunnel_id": null
+    }
+  ],
+  "top_p": 1.0,
+  "background": false,
+  "completed_at": 1795100373.0,
+  "conversation": null,
+  "max_output_tokens": null,
+  "max_tool_calls": null,
+  "moderation": null,
+  "previous_response_id": null,
+  "prompt": null,
+  "prompt_cache_key": null,
+  "prompt_cache_options": null,
+  "prompt_cache_retention": "in_memory",
+  "reasoning": {
+    "context": null,
+    "effort": null,
+    "generate_summary": null,
+    "mode": null,
+    "summary": null
+  },
+  "safety_identifier": null,
+  "service_tier": "default",
+  "status": "completed",
+  "text": {
+    "format": {
+      "type": "text"
+    },
+    "verbosity": "medium"
+  },
+  "top_logprobs": 0,
+  "truncation": "disabled",
+  "usage": {
+    "input_tokens": 2953,
+    "input_tokens_details": {
+      "cache_write_tokens": 0,
+      "cached_tokens": 0
+    },
+    "output_tokens": 136,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 3089
+  },
+  "user": null,
+  "agent_reference": {
+    "type": "agent_reference",
+    "name": "Text-analyzer-agent",
+    "version": "12"
+  },
+  "content_filters": [
+    {
+      "blocked": false,
+      "source_type": "prompt",
+      "content_filter_results": {
+        "sexual": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "hate": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "violence": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "self_harm": {
+          "filtered": false,
+          "severity": "safe"
+        },
+        "jailbreak": {
+          "filtered": false,
+          "detected": false
+        }
+      },
+      "content_filter_raw": [],
+      "content_filter_offsets": {
+        "start_offset": 0,
+        "end_offset": 12194,
+        "check_offset": 0
+      }
+    }
+  ]
+}
